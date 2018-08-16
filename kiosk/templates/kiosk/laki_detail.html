@@ -1,0 +1,22 @@
+{% extends 'kiosk/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="row">
+    <div class="col mt-1"><h2>Details: {{laki.vorname}} {{laki.nachname}}</h2></div>
+</div>
+
+<div class="row">
+
+    <div class="col">
+        Balance: {{laki.konto.balance}}
+
+    </div>
+    <div class="col">
+        <a href="{% url 'laki-kiosk' laki.id%}">Kiosk</a>
+    </div>
+
+</div>
+
+{% endblock %}

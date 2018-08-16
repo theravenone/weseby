@@ -1,0 +1,52 @@
+{% extends 'kiosk/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col">
+        <table class="table table-striped table-bordered table-hover table-sm" id="lakitable">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Vorname</th>
+                    <th scope="col">Nachname</th>
+                    <th scope="col">Zelt</th>
+                    <th scope="col">Konto</th>
+                    <th scope="col">Saldo</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for laki in laki_liste %}
+
+                    <tr id="laki{{laki.id}}">
+                        <th scope="row">{{laki.id}}</th>
+                        <td>{{laki.vorname}}</td>
+                        <td>{{laki.nachname}}</td>
+                        <td>{{laki.zelt}}</td>
+                        <td>{{laki.konto}}</td>
+                        <td>{{laki.konto.balance}} €</td>
+                    </tr>
+                    <script type="text/javascript">
+                        $(document).ready(function(){
+                        $('tr#laki{{laki.id}}').click(function(event) {
+                          window.location.href = '{% url 'laki-kiosk' laki.id%}';
+                        });
+                      });
+                    </script>
+                {% empty %}
+                    Keine Lakis vorhanden
+                {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script type="text/javascript">
+$( "li" ).last().removeClass( "active" );
+$( "#kiosk" ).last().addClass( "active" );
+</script>
+{% endblock %}
