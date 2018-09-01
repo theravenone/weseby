@@ -3,6 +3,12 @@
 {% load static %}
 
 {% block content %}
+<div class="row">
+    <div class="col">
+        <h1>Zelt {{zelt}}</h1>
+        Guthaben: {{zeltbalance}} €
+    </div>
+</div>
 
 <div class="row">
     <div class="col">
@@ -58,8 +64,6 @@
                         });
                       });
                     </script>
-                {% empty %}
-                    Keine Lakis vorhanden
                 {% endfor %}
 
             </tbody>

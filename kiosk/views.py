@@ -53,4 +53,10 @@ def LakiKiosk(request, pk):
 def ZeltDetail(request, pk):
     lakisZelt = Laki.objects.filter(zelt__zeltnummer=pk)
 
-    return render(request, 'kiosk/zelt_detail.html', {'laki_liste': lakisZelt})
+    zeltbalance = 0
+    zelt = pk
+
+    for laki in lakisZelt:
+        zeltbalance += laki.konto.getBalance()
+
+    return render(request, 'kiosk/zelt_detail.html', {'laki_liste': lakisZelt, 'zeltbalance': zeltbalance, 'zelt': zelt })
