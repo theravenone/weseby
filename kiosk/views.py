@@ -1,12 +1,11 @@
+from .models import *
+from .forms import *
+
 from django.utils import timezone
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.urls import reverse
 from django.views import generic
-# Create your views here.
-
-from .models import *
-from .forms import *
 
 
 class LakiListView(generic.ListView):
