@@ -1,18 +1,18 @@
-from .models import *
-from .forms import *
-
 from django.utils import timezone
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.urls import reverse
 from django.views import generic
 
+from .models import Laki
+from .forms import LakiForm, KioskForm
+
 
 class LakiListView(generic.ListView):
     context_object_name = 'laki_liste'
 
     def get_queryset(self):
-       return Laki.objects.all()
+        return Laki.objects.all()
 
 
 def KioskList(request):
@@ -46,7 +46,11 @@ def LakiKiosk(request, pk):
     else:
         form = KioskForm()
 
-    return render(request, 'kiosk/laki_kiosk.html', {'form': form, 'laki': laki, 'buchungen': buchungen_withdraw})
+    return render(request, 'kiosk/laki_kiosk.html', {
+        'form': form,
+        'laki': laki,
+        'buchungen': buchungen_withdraw
+        })
 
 
 def ZeltDetail(request, pk):
@@ -58,4 +62,8 @@ def ZeltDetail(request, pk):
     for laki in lakisZelt:
         zeltbalance += laki.konto.getBalance()
 
-    return render(request, 'kiosk/zelt_detail.html', {'laki_liste': lakisZelt, 'zeltbalance': zeltbalance, 'zelt': zelt })
+    return render(request, 'kiosk/zelt_detail.html', {
+        'laki_liste': lakisZelt,
+        'zeltbalance': zeltbalance,
+        'zelt': zelt
+        })

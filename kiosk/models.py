@@ -4,12 +4,14 @@ from django.utils import timezone
 
 
 class Zeltlager(models.Model):
+    """ Model Zeltlager """
     jahr = models.IntegerField(default=1900)
     haelfte = models.IntegerField(default=1)
     kasse = models.DecimalField(default=0, max_digits=6, decimal_places=2)
 
 
 class Zelt(models.Model):
+    """ Model Zelt """
     zeltnummer = models.CharField(max_length=2)
     zeltname = models.CharField(max_length=20)
     zeltlager = models.ForeignKey(Zeltlager, on_delete=models.SET_NULL, null=True)
@@ -19,6 +21,7 @@ class Zelt(models.Model):
 
 
 class Konto(models.Model):
+    """ Model Konto """
     kontoNr = models.CharField(max_length=10)
     balance = models.DecimalField(default=0, max_digits=6, decimal_places=2)
 
@@ -26,18 +29,22 @@ class Konto(models.Model):
         return self.kontoNr
 
     def getBalance(self):
+        """ Konto getBalance function """
         return self.balance
 
     def getKontoNr(self):
+        """ Konto getKontoNr function """
         return self.kontoNr
 
     def checkWithdraw(self, amount):
+        """ Konto checkWithdraw function """
         if self.balance - amount >= 0.0:
             return True
         else:
             return False
 
     def deposit(self, amount):
+        """ Konti deposit function """
         self.balance += amount
         buchung = Buchung()
         buchung.amount = amount
@@ -48,6 +55,7 @@ class Konto(models.Model):
         return True
 
     def withdraw(self, amount):
+        """ Konto withdraw frunction """
         if self.checkWithdraw(amount):
             self.balance -= amount
             buchung = Buchung()
@@ -62,6 +70,7 @@ class Konto(models.Model):
 
 
 class Buchung(models.Model):
+    """ Model class Buchung """
     konto = models.ForeignKey(Konto, on_delete=models.SET_NULL, null=True)
     balance = models.DecimalField(default=0, max_digits=6, decimal_places=2)
     amount = models.DecimalField(default=0, max_digits=6, decimal_places=2)
@@ -70,6 +79,7 @@ class Buchung(models.Model):
 
 
 class Laki(models.Model):
+    """ Model class Laki """
     vorname = models.CharField(max_length=20)
     nachname = models.CharField(max_length=20)
     geschlecht = models.CharField(max_length=10, default='unknown')
@@ -89,4 +99,3 @@ class Laki(models.Model):
 
     def __str__(self):
         return self.vorname + " " + self.nachname
-
