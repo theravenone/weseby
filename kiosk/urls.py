@@ -21,6 +21,7 @@ from . import views
 urlpatterns = [
     path('lakis/', LakiListView.as_view(), name='laki-list'),
     path('kiosk/', views.KioskList, name='kiosk-list'),
-    path('<int:pk>/', LakiDetailView.as_view(), name='laki-detail'),
-    path('<int:pk>/kiosk', views.LakiKiosk, name='laki-kiosk'),
+    path('lakis/<int:pk>/', LakiDetailView.as_view(), name='laki-detail'),
+    path('kiosk/<int:pk>', views.LakiKiosk, name='laki-kiosk'),
+    path('zelt/<int:pk>', views.ZeltDetail, name='zelt-detail'),
 ]

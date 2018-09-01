@@ -29,7 +29,7 @@ class LakiDetailView(generic.DetailView):
 
 def LakiKiosk(request, pk):
     laki = Laki.objects.get(pk=pk)
-    buchungen = laki.konto.buchung_set.all()
+    #buchungen = laki.konto.buchung_set.all()
     buchungen_withdraw = laki.konto.buchung_set.all().filter(type='withdraw')
 
     if request.method == 'POST':
@@ -48,3 +48,9 @@ def LakiKiosk(request, pk):
         form = KioskForm()
 
     return render(request, 'kiosk/laki_kiosk.html', {'form': form, 'laki': laki, 'buchungen': buchungen_withdraw})
+
+
+def ZeltDetail(request, pk):
+    lakisZelt = Laki.objects.filter(zelt__zeltnummer=pk)
+
+    return render(request, 'kiosk/zelt_detail.html', {'laki_liste': lakisZelt})
