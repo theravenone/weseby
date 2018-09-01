@@ -19,6 +19,7 @@
     </div>
 
     <div class="col-3">
+        Heute schon abgebucht: {{ today }}
         <form action="#" method="post">
             {% csrf_token %}
             Betrag: {{form.amount}}

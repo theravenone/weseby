@@ -1,3 +1,5 @@
+import datetime
+
 from django.utils import timezone
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, Http404, HttpResponseRedirect
@@ -34,6 +36,13 @@ def LakiKiosk(request, pk):
     laki = Laki.objects.get(pk=pk)
     #buchungen = laki.konto.buchung_set.all()
     buchungen_withdraw = laki.konto.buchung_set.all().filter(type='withdraw')
+    today = 0
+    date_today = timezone.now().date()
+
+    for buchung in buchungen_withdraw:
+        #check if buchung from today
+        if buchung.datetime.date() == date_today:
+            today += buchung.amount
 
     if request.method == 'POST':
         form = KioskForm(request.POST)
@@ -53,7 +62,8 @@ def LakiKiosk(request, pk):
     return render(request, 'kiosk/laki_kiosk.html', {
         'form': form,
         'laki': laki,
-        'buchungen': buchungen_withdraw
+        'buchungen': buchungen_withdraw,
+        'today': today
         })
 
 
@@ -65,7 +75,7 @@ def ZeltDetail(request, pk):
     zelt = pk
 
     for laki in lakis_zelt:
-        zeltbalance += laki.konto.getBalance()
+        zeltbalance += laki.konto.get_balance()
 
     return render(request, 'kiosk/zelt_detail.html', {
         'laki_liste': lakis_zelt,
