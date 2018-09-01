@@ -28,15 +28,15 @@ class Konto(models.Model):
     def __str__(self):
         return self.kontoNr
 
-    def getBalance(self):
+    def get_balance(self):
         """ Konto getBalance function """
         return self.balance
 
-    def getKontoNr(self):
+    def get_konto_nr(self):
         """ Konto getKontoNr function """
         return self.kontoNr
 
-    def checkWithdraw(self, amount):
+    def check_withdraw(self, amount):
         """ Konto checkWithdraw function """
         if self.balance - amount >= 0.0:
             return True
@@ -56,7 +56,7 @@ class Konto(models.Model):
 
     def withdraw(self, amount):
         """ Konto withdraw frunction """
-        if self.checkWithdraw(amount):
+        if self.check_withdraw(amount):
             self.balance -= amount
             buchung = Buchung()
             buchung.amount = amount
