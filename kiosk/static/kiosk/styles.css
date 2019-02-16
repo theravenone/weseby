@@ -11,5 +11,13 @@
 }
 
 #card_hinweis {
+    width : 95% ;
+}
+
+.table_btn {
     width : 100% ;
+}
+
+.btn_money {
+    width : 90% ;
 }

@@ -15,10 +15,12 @@ Including another URLconf
 """
 
 from django.urls import path, include
+from django.views.generic import RedirectView
 from .views import *
 from . import views
 
 urlpatterns = [
+    path('/', RedirectView.as_view(url='/kiosk/overview')),
     path('lakis/', LakiListView.as_view(), name='laki-list'),
     path('kiosk/', views.KioskList, name='kiosk-list'),
     path('kiosk/overview', views.KioskOverview, name='kiosk-overview'),

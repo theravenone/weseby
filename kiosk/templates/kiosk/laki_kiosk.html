@@ -4,53 +4,111 @@
 
 {% block content %}
 
-<script src="{% static 'kiosk/Highcharts-6.1.1/code/highcharts.js' %}"></script>
-<script src="{% static 'kiosk/Highcharts-6.1.1/code/modules/series-label.js' %}"></script>
-<script src="{% static 'kiosk/Highcharts-6.1.1/code/modules/exporting.js' %}"></script>
-<script src="{% static 'kiosk/Highcharts-6.1.1/code/modules/export-data.js' %}"></script>
-
 <div class="row">
     <div class="col mt-1"><h2>Konto von: {{laki.vorname}} {{laki.nachname}}</h2></div>
 </div>
 
 <div class="row">
     <div class="col-5">
-        Heute schon abgebucht: {{ today }}
-        <form action="#" method="post">
-            {% csrf_token %}
-            Betrag: {{form.amount}}
-            <input type="submit" value="Abbuchen" class="btn btn-primary">
-        </form>
+        <div class="row">
+            <div class="col">
+                <h3>Heute schon abgebucht: {{ today }}</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <form action="#" method="post">
+                    {% csrf_token %}
+                    Betrag: {{form.amount}}
+                    <input type="submit" value="Abbuchen" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <form>
+                    <table class="table_btn">
+                        <tr>
+                            <td>
+                                <button name="100" value="100" type="submit" class="btn btn-primary btn-lg btn_money">1 €</button>
+                            </td>
+                            <td>
+                                <button name="200" value="200" type="submit" class="btn btn-primary btn-lg btn_money">2 €</button>
+                            </td>
+                            <td>
+                                 <button name="200" value="200" type="submit" class="btn btn-primary btn-lg btn_money">1 Cent</button>
+                            </td>
+                            <td>
+                                <button name="200" value="200" type="submit" class="btn btn-primary btn-lg btn_money">2 Cent</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button name="200" value="200" type="submit" class="btn btn-primary btn-lg btn_money">5 Cent</button>
+                            </td>
+                            <td>
+                                <button name="200" value="200" type="submit" class="btn btn-primary btn-lg btn_money">10 Cent</button>
+                            </td>
+                            <td>
+                                <button name="200" value="200" type="submit" class="btn btn-primary btn-lg btn_money">15 Cent</button>
+                            </td>
+                            <td>
+                                <button name="200" value="200" type="submit" class="btn btn-primary btn-lg btn_money">20 Cent</button>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>
+                                <button name="200" value="200" type="submit" class="btn btn-primary btn-lg btn_money">40 Cent</button>
+                            </td>
+                            <td>
+                                <button name="200" value="200" type="submit" class="btn btn-primary btn-lg btn_money">45 Cent</button>
+                            </td>
+                            <td>
+                                <button name="200" value="200" type="submit" class="btn btn-primary btn-lg btn_money">50 Cent</button>
+                            </td>
+                            <td>
+                                <button name="200" value="200" type="submit" class="btn btn-primary btn-lg btn_money">70 Cent</button>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>
+                                <button name="200" value="200" type="submit" class="btn btn-primary btn-lg btn_money">90 Cent</button>
+                            </td>
+                            <td colspan="3">
+                                <button name="200" value="200" type="submit" class="btn btn-primary btn-lg btn_money">Pfand zurück</button>
+                            </td>
+                        </tr>
+         
+                    
+                     
+                    </table>
+                <form>
+            </div>
+        </div
+    </div>
     </div>
 
     <div class="col-4">
-        <div class="row">
-            <div class="col">
-                <div id="chart_container"></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <table class="table table-striped table-bordered table-hover table-sm">
-                    <thead>
-                        <tr>
-                            <th scope="col">Datum</th>
-                            <th scope="col">Betrag</th>
-                            <th scope="col">Kontostand</th>
-                            <th scope="col">Typ</th>
-                        </tr>
-                    </thead>
-                    {% for buchung in buchungen %}
-                    <tr>
-                        <td>{{buchung.datetime}}</td>
-                        <td>{{buchung.amount}} €</td>
-                        <td>{{buchung.balance}} €</td>
-                        <td>{{buchung.type}}</td>
-                    </tr>
-                    {% endfor %}
-                </table>
-            </div>
-        </div>
+        <table class="table table-striped table-bordered table-hover table-sm">
+            <thead>
+                <tr>
+                    <th scope="col">Datum</th>
+                    <th scope="col">Betrag</th>
+                    <th scope="col">Kontostand</th>
+                    <th scope="col">Typ</th>
+                </tr>
+            </thead>
+            {% for buchung in buchungen %}
+            <tr>
+                <td>{{buchung.datetime}}</td>
+                <td>{{buchung.amount}} €</td>
+                <td>{{buchung.balance}} €</td>
+                <td>{{buchung.type}}</td>
+            </tr>
+            {% endfor %}
+        </table>
     </div>
 
 
@@ -71,62 +129,6 @@
 <script type="text/javascript">
 $( "li" ).last().removeClass( "active" );
 $( "#kiosk" ).last().addClass( "active" );
-
-Highcharts.chart('chart_container', {
-
-    title: {
-        text: 'Kontoverlauf'
-    },
-    xAxis: {
-        type: 'datetime',
-        labels: {
-            overflow: 'justify'
-        }
-    },
-    yAxis: {
-        title: {
-            text: 'Guthaben'
-        }
-    },
-    legend: {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'middle'
-    },
-
-    plotOptions: {
-        series: {
-            label: {
-                connectorAllowed: false
-            }
-        }
-    },
-
-    series: [{
-        name: 'Guthaben',
-        data: [
-        {% for buchung in buchungen %}
-            [Date.UTC({{buchung.datetime.year}}, {{buchung.datetime.month}}-1, {{buchung.datetime.day}}, {{buchung.datetime.hour}}, {{buchung.datetime.minute}}, {{buchung.datetime.second}}), {{buchung.balance}}],
-        {% endfor %}
-        ]
-    }],
-
-    responsive: {
-        rules: [{
-            condition: {
-                maxWidth: 500
-            },
-            chartOptions: {
-                legend: {
-                    layout: 'horizontal',
-                    align: 'center',
-                    verticalAlign: 'bottom'
-                }
-            }
-        }]
-    }
-
-});
 </script>
 
 {% endblock %}

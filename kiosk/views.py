@@ -74,7 +74,7 @@ def LakiKiosk(request, pk):
             laki.konto.withdraw(amount)
             laki.konto.save()
 
-            return redirect('kiosk-list')
+            return redirect('kiosk-overview')
 
     else:
         form = KioskForm()
