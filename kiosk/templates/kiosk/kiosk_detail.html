@@ -1,0 +1,39 @@
+{% extends 'kiosk/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="row">
+    <div class="col">
+        <h1> Zelt {{zelt.zeltnummer}}: {{zelt.zeltname}}</h1>
+    </div>
+</div>
+
+<div class="row">
+    
+
+    {% for laki in laki_liste %}
+
+        <div class="col-2">
+            <a href="{% url 'laki-kiosk' laki.id%}">
+            <div class="card">
+                <img class="card-img-top justify-content-center" src="{% static 'kiosk/img/3zu2.png' %}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{laki.vorname}} {{laki.nachname}}</h5>
+                </div>
+            </div> 
+            </a>      
+        </div>
+
+    {% empty %}
+        Keine Lakis vorhanden
+    {% endfor %}
+
+
+</div>
+
+<script type="text/javascript">
+$( "li" ).last().removeClass( "active" );
+$( "#lakis" ).last().addClass( "active" );
+</script>
+{% endblock %}

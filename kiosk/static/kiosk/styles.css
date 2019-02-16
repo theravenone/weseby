@@ -5,3 +5,11 @@
 .container_ {
     max-width : 1700px ;
 }
+
+.card {
+    margin-bottom: 10px;
+}
+
+#card_hinweis {
+    width : 100% ;
+}

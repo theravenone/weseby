@@ -6,7 +6,7 @@ from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.urls import reverse
 from django.views import generic
 
-from .models import Laki
+from .models import Laki, Zelt
 from .forms import LakiForm, KioskForm
 
 
@@ -23,6 +23,26 @@ def KioskList(request):
     lakis = Laki.objects.all()
 
     return render(request, 'kiosk/kiosk_list.html', {'laki_liste': lakis})
+
+
+def KioskOverview(request):
+    """ KioskOverviewView """
+    zelte = Zelt.objects.all().order_by('zeltnummer')
+
+    return render(request, 'kiosk/kiosk_overview.html', {'zelte': zelte})
+
+
+def KioskDetail(request, pk):
+    """ KioskDetailView """
+    lakis_zelt = Laki.objects.filter(zelt__zeltnummer=pk).order_by('vorname')
+
+    zelt = Zelt.objects.get(pk=pk)
+
+
+    return render(request, 'kiosk/kiosk_detail.html', {
+        'laki_liste': lakis_zelt,
+        'zelt': zelt
+        })
 
 
 class LakiDetailView(generic.DetailView):

@@ -1,0 +1,5 @@
+source test_env/bin/activate
+python manage.py runserver
+
+python manage.py makemigrations <your app name>
+python manage.py migrate

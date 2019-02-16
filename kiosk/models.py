@@ -12,12 +12,12 @@ class Zeltlager(models.Model):
 
 class Zelt(models.Model):
     """ Model Zelt """
-    zeltnummer = models.CharField(max_length=2)
+    zeltnummer = models.IntegerField(default=1)
     zeltname = models.CharField(max_length=20)
     zeltlager = models.ForeignKey(Zeltlager, on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
-        return self.zeltnummer
+        return str(self.zeltnummer)
 
 
 class Konto(models.Model):

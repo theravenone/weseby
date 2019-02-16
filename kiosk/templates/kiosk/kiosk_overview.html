@@ -1,0 +1,33 @@
+{% extends 'kiosk/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="row">
+
+    {% for zelt in zelte %}
+
+        <div class="col-2">
+            <a href="{% url 'kiosk-detail' zelt.id%}">
+            <div class="card">
+                <img class="card-img-top justify-content-center" src="{% static 'kiosk/img/3zu2.png' %}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Zelt {{zelt.zeltnummer}}: {{zelt.zeltname}}</h5>
+                </div>
+            </div> 
+            </a>      
+        </div>
+
+    {% empty %}
+        Keine Zelte vorhanden
+    {% endfor %}
+
+
+</div>
+
+<script type="text/javascript">
+$( "li" ).last().removeClass( "active" );
+$( "#kiosk" ).last().addClass( "active" );
+</script>
+{% endblock %}
