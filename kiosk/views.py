@@ -5,6 +5,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.urls import reverse
 from django.views import generic
+from django.contrib.auth.decorators import login_required
 
 from .models import Laki, Zelt
 from .forms import LakiForm, KioskForm
@@ -18,6 +19,7 @@ class LakiListView(generic.ListView):
         return Laki.objects.all()
 
 
+@login_required
 def KioskList(request):
     """ KioskListView """
     lakis = Laki.objects.all()
@@ -25,6 +27,7 @@ def KioskList(request):
     return render(request, 'kiosk/kiosk_list.html', {'laki_liste': lakis})
 
 
+@login_required
 def KioskOverview(request):
     """ KioskOverviewView """
     zelte = Zelt.objects.all().order_by('zeltnummer')
@@ -32,6 +35,7 @@ def KioskOverview(request):
     return render(request, 'kiosk/kiosk_overview.html', {'zelte': zelte})
 
 
+@login_required
 def KioskDetail(request, pk):
     """ KioskDetailView """
     lakis_zelt = Laki.objects.filter(zelt__zeltnummer=pk).order_by('vorname')
@@ -51,6 +55,7 @@ class LakiDetailView(generic.DetailView):
     context_object_name = 'laki'
 
 
+@login_required
 def LakiKiosk(request, pk):
     """ LakiKioskView """
     laki = Laki.objects.get(pk=pk)
@@ -87,6 +92,7 @@ def LakiKiosk(request, pk):
         })
 
 
+@login_required
 def ZeltDetail(request, pk):
     """ ZeltDetailView """
     lakis_zelt = Laki.objects.filter(zelt__zeltnummer=pk)

@@ -21,3 +21,9 @@
 .btn_money {
     width : 90% ;
 }
+
+.card-body {
+    padding: 0.8rem;
+    padding-bottom: 0.3rem;
+}
+

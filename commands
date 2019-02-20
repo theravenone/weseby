@@ -6,3 +6,7 @@ python manage.py makemigrations <your app name>
 python manage.py migrate
 
 kiosk\weseby\settings.py -> allowed_hosts
+
+    path('kiosk/login2', auth_views.login', {'template_name': 'kiosk/login.html'}, name='login'),
+    path('kiosk/logout', auth_views.logout, name='logout')
+        

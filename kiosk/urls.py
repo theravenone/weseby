@@ -16,16 +16,20 @@ Including another URLconf
 
 from django.urls import path, include
 from django.views.generic import RedirectView
+from django.conf.urls import include, url
+from django.contrib.auth import views as auth_views
 from .views import *
 from . import views
 
 urlpatterns = [
-    path('/', RedirectView.as_view(url='/kiosk/overview')),
     path('lakis/', LakiListView.as_view(), name='laki-list'),
     path('kiosk/', views.KioskList, name='kiosk-list'),
     path('kiosk/overview', views.KioskOverview, name='kiosk-overview'),
     path('kiosk/zelt/<int:pk>', views.KioskDetail, name='kiosk-detail'),
-    path('lakis/<int:pk>/', LakiDetailView.as_view(), name='laki-detail'),
+    path('lakis/<int:pk>', LakiDetailView.as_view(), name='laki-detail'),
     path('kiosk/<int:pk>', views.LakiKiosk, name='laki-kiosk'),
     path('zelt/<int:pk>', views.ZeltDetail, name='zelt-detail'),
+    path('kiosk/test', views.KioskOverview, name='test'),
+    url(r'^login/$', auth_views.LoginView.as_view(template_name="kiosk/login.html"), name="login"),
+    url(r'^logout/$', auth_views.LogoutView.as_view(template_name="kiosk/logout.html"), name="logout"),
 ]
