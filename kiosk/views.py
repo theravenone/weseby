@@ -11,13 +11,12 @@ from .models import Laki, Zelt
 from .forms import LakiForm, KioskForm
 
 
-class LakiListView(generic.ListView):
+@login_required
+def LakiList(request):
     """ LakiListView """
-    context_object_name = 'laki_liste'
+    lakis = Laki.objects.all().order_by('vorname')
 
-    def get_queryset(self):
-        return Laki.objects.all()
-
+    return render(request, 'kiosk/laki_list.html', {'laki_liste': lakis})
 
 @login_required
 def KioskList(request):
@@ -49,10 +48,17 @@ def KioskDetail(request, pk):
         })
 
 
-class LakiDetailView(generic.DetailView):
+@login_required
+def LakiDetail(request, pk):
     """ LakiDetailView """
-    model = Laki
-    context_object_name = 'laki'
+    laki = Laki.objects.get(pk=pk)
+
+    buchungen = laki.konto.buchung_set.all()
+
+    return render(request, 'kiosk/laki_detail.html', {
+        'laki': laki,
+        'buchungen': buchungen
+        })
 
 
 @login_required
