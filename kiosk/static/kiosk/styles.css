@@ -27,3 +27,11 @@
     padding-bottom: 0.3rem;
 }
 
+
+.laki-name{
+    font-size:1rem;
+}
+
+.card-body{
+    min-height: 4.2rem;
+}

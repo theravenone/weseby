@@ -17,9 +17,9 @@
         <div class="col-2">
             <a href="{% url 'laki-kiosk' laki.id%}">
             <div class="card">
-                <img class="card-img-top justify-content-center" src="{% static 'kiosk/img/3zu2.png' %}" alt="Card image cap">
+                <img class="card-img-top justify-content-center img-fluid" src="{% get_static_prefix %}kiosk/lakis/{{laki.id}}.jpg" alt="Laki {{laki.id}}">
                 <div class="card-body">
-                    <h5 class="card-title">{{laki.vorname}} {{laki.nachname}}</h5>
+                    <h5 class="card-title laki-name">{{laki.vorname}} {{laki.nachname}}</h5>
                 </div>
             </div> 
             </a>      

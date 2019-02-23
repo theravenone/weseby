@@ -66,7 +66,7 @@ def LakiKiosk(request, pk):
     """ LakiKioskView """
     laki = Laki.objects.get(pk=pk)
     #buchungen = laki.konto.buchung_set.all()
-    buchungen_withdraw = laki.konto.buchung_set.all().filter(type='withdraw')
+    buchungen_withdraw = laki.konto.buchung_set.all().filter(type='withdraw').order_by('-datetime')
     today = 0
     date_today = timezone.now().date()
 
@@ -104,7 +104,7 @@ def ZeltDetail(request, pk):
     lakis_zelt = Laki.objects.filter(zelt__zeltnummer=pk)
 
     zeltbalance = 0
-    zelt = pk
+    zelt = Zelt.objects.get(pk=pk)
 
     for laki in lakis_zelt:
         zeltbalance += laki.konto.get_balance()

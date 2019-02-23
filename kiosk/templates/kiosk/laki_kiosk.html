@@ -97,7 +97,6 @@
                     <th scope="col">Datum</th>
                     <th scope="col">Betrag</th>
                     <th scope="col">Kontostand</th>
-                    <th scope="col">Typ</th>
                 </tr>
             </thead>
             {% for buchung in buchungen %}
@@ -105,7 +104,6 @@
                 <td>{{buchung.datetime}}</td>
                 <td>{{buchung.amount}} €</td>
                 <td>{{buchung.balance}} €</td>
-                <td>{{buchung.type}}</td>
             </tr>
             {% endfor %}
         </table>
@@ -114,7 +112,7 @@
 
     <div class="col-3">
         <div class="row">
-            <img class="card-img-top justify-content-center" src="{% static 'kiosk/img/3zu2.png' %}" class="rounded" alt="Lakibild">
+            <img class="card-img-top justify-content-center img-fluid" src="{% get_static_prefix %}kiosk/lakis/{{laki.id}}.jpg" alt="Laikibild">
         </div>
         <div class="row">
             <div class="card" id="card_hinweis">
