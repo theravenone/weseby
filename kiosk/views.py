@@ -6,6 +6,7 @@ from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.urls import reverse
 from django.views import generic
 from django.contrib.auth.decorators import login_required
+from decimal import *
 
 from .models import Laki, Zelt
 from .forms import LakiForm, KioskForm
@@ -64,11 +65,13 @@ def LakiDetail(request, pk):
 @login_required
 def LakiKiosk(request, pk):
     """ LakiKioskView """
-    laki = Laki.objects.get(pk=pk)
-    #buchungen = laki.konto.buchung_set.all()
-    buchungen_withdraw = laki.konto.buchung_set.all().filter(type='withdraw').order_by('-datetime')
     today = 0
     date_today = timezone.now().date()
+    date_yesterday = date_today - datetime.timedelta(1)
+    date_tomorrow = date_today + datetime.timedelta(1)
+
+    laki = Laki.objects.get(pk=pk)
+    buchungen_withdraw = laki.konto.buchung_set.all().filter(type='withdraw').filter(datetime__range=(date_yesterday, date_tomorrow)).order_by('-datetime')
 
     for buchung in buchungen_withdraw:
         #check if buchung from today
@@ -79,8 +82,10 @@ def LakiKiosk(request, pk):
         form = KioskForm(request.POST)
 
         if form.is_valid():
-
-            amount = form.cleaned_data['amount']
+            if form.cleaned_data['betrag'] == "0":
+                amount = form.cleaned_data['amount']
+            else:
+                amount = Decimal(form.cleaned_data['betrag'])/100
 
             laki.konto.withdraw(amount)
             laki.konto.save()

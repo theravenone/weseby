@@ -20,6 +20,13 @@
             {% csrf_token %}
             <div class="row">
                 <div class="col">
+                    Betrag: {{form.amount}}
+                    <button name="betrag" value="0" type="submit" class="btn btn-primary">Abbuchen</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
                     <table class="table_btn">
                         <tr>
                             <td>
@@ -49,7 +56,7 @@
                                 <button name="betrag" value="20" type="submit" class="btn btn-primary btn-lg btn_money">20 Cent</button>
                             </td>
                         </tr>
-                        <tr>
+                            <tr>
                             <td>
                                 <button name="betrag" value="40" type="submit" class="btn btn-primary btn-lg btn_money">40 Cent</button>
                             </td>
@@ -63,7 +70,7 @@
                                 <button name="betrag" value="70" type="submit" class="btn btn-primary btn-lg btn_money">70 Cent</button>
                             </td>
                         </tr>
-                        <tr>
+                            <tr>
                             <td>
                                 <button name="betrag" value="90" type="submit" class="btn btn-primary btn-lg btn_money">90 Cent</button>
                             </td>

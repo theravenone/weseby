@@ -5,4 +5,4 @@ class LakiForm(forms.Form):
 
 
 class KioskForm(forms.Form):
-    amount = forms.DecimalField(max_digits=5, decimal_places=2)
+    betrag = forms.CharField()
