@@ -9,7 +9,7 @@ from django.contrib.auth.decorators import login_required
 from decimal import *
 
 from .models import Laki, Zelt
-from .forms import LakiForm, KioskForm
+from .forms import LakiForm, KioskForm, ManualForm
 
 
 @login_required
@@ -54,9 +54,24 @@ def LakiDetail(request, pk):
     """ LakiDetailView """
     laki = Laki.objects.get(pk=pk)
 
-    buchungen = laki.konto.buchung_set.all()
+    buchungen = laki.konto.buchung_set.all().order_by('-datetime')
+
+    if request.method == 'POST':
+        form = ManualForm(request.POST)
+
+        if form.is_valid():
+            amount = form.cleaned_data['amount']
+
+            laki.konto.withdraw(amount)
+            laki.konto.save()
+
+            return redirect('laki-list')
+
+    else:
+        form = ManualForm()
 
     return render(request, 'kiosk/laki_detail.html', {
+        'form': form,
         'laki': laki,
         'buchungen': buchungen
         })

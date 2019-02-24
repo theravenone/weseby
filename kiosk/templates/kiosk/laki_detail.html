@@ -18,6 +18,15 @@
     <div class="col-5">
         <div class="row">
             <div class="col">
+                <form action="#" method="post">
+                    {% csrf_token %}
+                    Betrag: {{form.amount}}
+                    <button name="betrag" value="0" type="submit" class="btn btn-primary">Abbuchen</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
                 <div id="chart_container"></div>
             </div>
         </div>
