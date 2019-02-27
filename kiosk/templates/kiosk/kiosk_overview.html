@@ -11,7 +11,7 @@
         <div class="col-2">
             <a href="{% url 'kiosk-detail' zelt.id%}">
             <div class="card">
-                <img class="card-img-top justify-content-center" src="{% static 'kiosk/zelte/3zu2.png' %}" alt="Card image cap">
+                <img class="card-img-top justify-content-center" src="{% get_static_prefix %}kiosk/zelte/{{zelt.zeltnummer}}.jpg" alt="Zeltbild {{zelt.zeltnummer}}">
                 <div class="card-body">
                     <h5 class="card-title">Zelt {{zelt.zeltnummer}}</h5>
                 </div>
