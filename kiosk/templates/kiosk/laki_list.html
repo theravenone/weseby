@@ -17,10 +17,10 @@
                     <th scope="col">Saldo</th>
                     <th scope="col">KK</th>
                     <th scope="col">Impf</th>
-                    <th scope="col">Elternz.</th>
-                    <th scope="col">Arztz.</th>
-                    <th scope="col">Geburtsdatum</th>
-                    <th scope="col">Geschlecht</th>
+                    <th scope="col">Eltern</th>
+                    <th scope="col">Arzt</th>
+                    <th scope="col">Geb.</th>
+                    <th scope="col">m/w/d</th>
                     <th scope="col">Telefon</th>
                     <th scope="col">Handy</th>
                     <th scope="col">Straße</th>
@@ -39,11 +39,34 @@
                         <td>{{laki.zelt}}</td>
                         <td>{{laki.konto}}</td>
                         <td>{{laki.konto.balance}} €</td>
-                        <td>{{laki.krankenkassenkarteVorhanden}}</td>
-                        <td>{{laki.impfpassVorhanden}}</td>
-                        <td>{{laki.elternzettelVorhanden}}</td>
-                        <td>{{laki.arztzettelVorhanden}}</td>
-                        <td>{{laki.geburtsdatum}}</td>
+                        
+                        {% if laki.krankenkassenkarteVorhanden %}
+                            <td>Ja</td>
+                        {% elif laki.privatVersichert %}
+                            <td>Privat</td>
+                        {% else %}
+                            <td class="prob">Nein</td>
+                        {% endif %}
+                        
+                        {% if laki.impfpassVorhanden %}
+                            <td>Ja</td>
+                        {% else %}   
+                            <td class="prob">Nein</td>
+                        {% endif %}
+
+                        {% if laki.elternzettelVorhanden %}
+                            <td>Ja</td>
+                        {% else %}   
+                            <td class="prob">Nein</td>
+                        {% endif %}
+                        
+                        {% if laki.arztzettelVorhanden %}
+                            <td>Ja</td>
+                        {% else %}   
+                            <td class="prob">Nein</td>
+                        {% endif %}
+
+                        <td>{{laki.geburtsdatum|date:'d.m.Y'}}</td>
                         <td>{{laki.geschlecht}}</td>
                         <td>{{laki.telefon}}</td>
                         <td>{{laki.handy}}</td>

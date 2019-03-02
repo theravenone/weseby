@@ -91,11 +91,11 @@ def LakiKiosk(request, pk):
     date_tomorrow = date_today + datetime.timedelta(1)
 
     laki = Laki.objects.get(pk=pk)
-    buchungen_withdraw = laki.konto.buchung_set.all().filter(type='withdraw').filter(datetime__range=(date_yesterday, date_tomorrow)).order_by('-datetime')
+    buchungen_withdraw = laki.konto.buchung_set.all().filter(datetime__range=(date_yesterday, date_tomorrow)).order_by('-datetime')
 
     for buchung in buchungen_withdraw:
         #check if buchung from today
-        if buchung.datetime.date() == date_today:
+        if buchung.datetime.date() == date_today and buchung.type == "withdraw":
             today += buchung.amount
 
     if request.method == 'POST':

@@ -5,7 +5,7 @@
 {% block content %}
 
 <div class="row">
-    <div class="col mt-1"><h2>{{laki.vorname}} {{laki.nachname}}: {{laki.konto.kontoNr}}</h2></div>
+    <div class="col mt-1"><h2>{{laki.vorname}} {{laki.nachname}}: {{laki.konto.kontoNr}} - {{laki.konto.balance}} €</h2></div>
 </div>
 
 <div class="row">
@@ -95,7 +95,7 @@
                 </thead>
                 {% for buchung in buchungen %}
                 <tr>
-                    <td>{{buchung.datetime|date:'Y-m-d H:i'}}</td>
+                    <td>{{buchung.datetime|date:'d.m.Y H:i'}}</td>
                     <td>{{buchung.amount}} €</td>
                     <td>{{buchung.balance}} €</td>
                 </tr>
