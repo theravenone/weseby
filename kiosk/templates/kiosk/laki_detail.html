@@ -30,6 +30,12 @@
                 <div id="chart_container"></div>
             </div>
         </div>
+        <div class="row">
+            <div class="card" id="card_hinweis">
+                <div class="card-header">Hinweis</div>
+                <div class="card-body">{{laki.hinweis}}</div>
+            </div>
+        </div>
     </div>
 
     <div class="col-3">
@@ -44,7 +50,7 @@
             </thead>
             {% for buchung in buchungen %}
             <tr>
-                <td>{{buchung.datetime}}</td>
+                <td>{{buchung.datetime|date:'Y-m-d H:i'}}</td>
                 <td>{{buchung.amount}} €</td>
                 <td>{{buchung.balance}} €</td>
                 <td>{{buchung.type}}</td>
@@ -54,15 +60,7 @@
     </div>
 
     <div class="col-4">
-        <div class="row">
-            <img class="card-img-top justify-content-center img-fluid" src="{% get_static_prefix %}kiosk/lakis/{{laki.id}}.jpg" alt="Lakibild">
-        </div>
-        <div class="row">
-            <div class="card" id="card_hinweis">
-                <div class="card-header">Hinweis</div>
-                <div class="card-body">{{laki.hinweis}}</div>
-            </div>
-        </div>
+        <img class="card-img-top justify-content-center img-fluid" src="{% get_static_prefix %}kiosk/lakis/{{laki.id}}.jpg" alt="Lakibild">     
     </div>
 
 </div>
