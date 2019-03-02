@@ -1,0 +1,30 @@
+{% extends 'kiosk/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="row">
+    <div class="col mt-1"><h2>Lagerübersicht</h2></div>
+</div>
+
+<div class="row">
+    
+    <div class="col-5">
+        <div class="row">
+            <div class="col">
+                <form action="{% url 'import-detail'%}" method="post">
+                    {% csrf_token %}
+                    <button name="listimport" type="submit" class="btn btn-primary">Lakiliste einlesen</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+$( "li" ).last().removeClass( "active" );
+$( "#lager" ).last().addClass( "active" );
+</script>
+
+{% endblock %}

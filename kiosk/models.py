@@ -52,6 +52,7 @@ class Konto(models.Model):
         buchung.konto = self
         buchung.balance = self.balance
         buchung.type = 'deposit'
+        buchung.save()
 
         return True
 
@@ -88,15 +89,16 @@ class Laki(models.Model):
     konto = models.ForeignKey(Konto, on_delete=models.SET_NULL, null=True)
     zelt = models.ForeignKey(Zelt, on_delete=models.SET_NULL, null=True)
     krankenkassenkarteVorhanden = models.BooleanField(default=False)
+    privatVersichert = models.BooleanField(default=False)
     impfpassVorhanden = models.BooleanField(default=False)
     elternzettelVorhanden = models.BooleanField(default=False)
     arztzettelVorhanden = models.BooleanField(default=False)
-    telefon = models.CharField(max_length=20)
-    handy = models.CharField(max_length=20)
-    strase = models.CharField(max_length=30)
-    plz = models.CharField(max_length=20)
-    ort = models.CharField(max_length=20)
-    hinweis = models.TextField()
+    telefon = models.CharField(max_length=20, blank=True)
+    handy = models.CharField(max_length=50, blank=True)
+    strase = models.CharField(max_length=30, blank=True)
+    plz = models.CharField(max_length=20, blank=True)
+    ort = models.CharField(max_length=100, blank=True)
+    hinweis = models.TextField(blank=True)
 
     def __str__(self):
         return self.vorname + " " + self.nachname

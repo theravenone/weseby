@@ -1,14 +1,19 @@
-import datetime
-
 from django.utils import timezone
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.urls import reverse
 from django.views import generic
 from django.contrib.auth.decorators import login_required
-from decimal import *
+from django.contrib.staticfiles.templatetags.staticfiles import static
 
-from .models import Laki, Zelt
+from decimal import *
+from tablib import Dataset
+import datetime
+import csv
+from django.core import serializers
+
+from .models import Laki, Zelt, Konto
+from .resources import *
 from .forms import LakiForm, KioskForm, ManualForm
 
 
@@ -134,3 +139,97 @@ def ZeltDetail(request, pk):
         'zeltbalance': zeltbalance,
         'zelt': zelt
         })
+
+
+@login_required
+def simple_upload(request):
+    """ LakiUploadView"""
+    if request.method == 'POST':
+        laki_resource = LakiResource()
+        dataset = Dataset()
+        new_lakis = request.FILES['myfile']
+
+        imported_data = dataset.load(new_lakis.read())
+        result = laki_resource.import_data(dataset, dry_run=True)  # Test the data import
+
+        if not result.has_errors():
+            laki_resource.import_data(dataset, dry_run=False)  # Actually import now
+
+    return render(request, 'core/simple_upload.html')
+
+
+@login_required
+def LagerDetail(request):
+    """ LakiKioskView """
+
+    url = static('kiosk/import/lakis.csv')
+    return render(request, 'kiosk/lager_detail.html', {
+            'url' : url
+        })
+
+
+@login_required
+def ImportDetail(request):
+    """ LakiUploadView"""
+
+    #url = static('kiosk/import/lakis.csv')
+    url = '/home/sven/enviroments/weseby/kiosk/static/kiosk/import/lakis.csv'
+    with open(url, mode='r') as csv_file:
+        csv_reader = csv.DictReader(csv_file, delimiter=';')
+        for row in csv_reader:
+            lakis_db = Laki.objects.filter(vorname=row["Vorname"]).filter(nachname=row["Name"])
+            if not lakis_db:
+                new_konto = Konto()
+                new_konto.kontoNr = row["Konto-Nr."]
+                new_konto.save()
+                new_konto.deposit(float(row["Geld"]))
+                new_konto.save()
+
+                new_laki = Laki()
+                new_laki.vorname = row["Vorname"]
+                new_laki.nachname = row["Name"]
+                new_laki.telefon = row["Tel_pr"]
+                new_laki.handy = row["Handy"]
+                new_laki.geschlecht = row["Geschlecht"]
+
+                if row["Ort"]:
+                    adresse = row["Ort"].split(" ")
+                    new_laki.plz = adresse[0]
+                    new_laki.ort = adresse[1]
+                
+                if row["Strasse"]:
+                    new_laki.strase = row["Strasse"]
+
+                if row["Geboren"]:
+                    new_laki.geburtsdatum = row["Geboren"]
+
+                if row["KK-Karte"] == 'j':
+                    new_laki.krankenkassenkarteVorhanden = True
+                    new_laki.privatVersichert = False
+                elif row["KK-Karte"] == 'p':
+                    new_laki.krankenkassenkarteVorhanden = False
+                    new_laki.privatVersichert = True
+                else:
+                    new_laki.krankenkassenkarteVorhanden = False
+                    new_laki.privatVersichert = False
+
+                if row["Elternzettel"] == "j":
+                    new_laki.elternzettelVorhanden = True
+                else:
+                    new_laki.elternzettelVorhanden = False
+
+                if row["Arztzettel"] == "j":
+                    new_laki.arztzettelVorhanden = True
+                else:
+                    new_laki.arztzettelVorhanden = False
+
+                if row["Impfpass"] == "j":
+                    new_laki.impfpassVorhanden = True
+                else:
+                    new_laki.impfpassVorhanden = False
+
+                new_laki.zelt = Zelt.objects.get(pk=row["Zelt"])
+                new_laki.konto = new_konto
+                new_laki.save()
+
+    return redirect('lager-detail')

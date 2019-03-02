@@ -30,6 +30,8 @@ urlpatterns = [
     path('kiosk/<int:pk>', views.LakiKiosk, name='laki-kiosk'),
     path('zelt/<int:pk>', views.ZeltDetail, name='zelt-detail'),
     path('kiosk/test', views.KioskOverview, name='test'),
+    path('kiosk/lager', views.LagerDetail, name='lager-detail'),
+    path('kiosk/import', views.ImportDetail, name='import-detail'),
     url(r'^login/$', auth_views.LoginView.as_view(template_name="kiosk/login.html"), name="login"),
     url(r'^logout/$', auth_views.LogoutView.as_view(template_name="kiosk/logout.html"), name="logout"),
 ]

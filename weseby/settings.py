@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'import_export',
 ]
 
 MIDDLEWARE = [
@@ -126,3 +127,5 @@ STATIC_URL = '/static/'
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = '/kiosk/kiosk/overview'
 LOGOUT_REDIRECT_URL = '/kiosk/login/'
+
+IMPORT_EXPORT_USE_TRANSACTIONS = True
