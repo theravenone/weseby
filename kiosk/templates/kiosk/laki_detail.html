@@ -18,10 +18,15 @@
     <div class="col-5">
         <div class="row">
             <div class="col">
-                <form action="#" method="post">
+                <form action="{% url 'laki-withdraw' laki.id%}" method="post">
                     {% csrf_token %}
                     Betrag: {{form.amount}}
                     <button name="betrag" value="0" type="submit" class="btn btn-primary">Abbuchen</button>
+                </form>
+                <form action="{% url 'laki-deposit' laki.id%}" method="post">
+                    {% csrf_token %}
+                    Betrag: {{form.amount}}
+                    <button name="betrag" value="einzahlen" type="submit" class="btn btn-primary">Einzahlen</button>
                 </form>
                 <form action="{% url 'konto-auszug' laki.id%}" method="post">
                     {% csrf_token %}

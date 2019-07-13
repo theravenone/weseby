@@ -84,6 +84,42 @@ def LakiDetail(request, pk):
 
 
 @login_required
+def LakiDeposit(request, pk):
+    """ LakiDepositView """
+    laki = Laki.objects.get(pk=pk)
+    current_user = request.user
+
+    if request.method == 'POST':
+        form_manual = ManualForm(request.POST)
+
+        if form_manual.is_valid():
+            amount = form_manual.cleaned_data['amount']
+
+            laki.konto.deposit(amount, current_user)
+            laki.konto.save()
+
+    return redirect('laki-detail', pk=pk)
+
+
+@login_required
+def LakiWithdraw(request, pk):
+    """ LakiWithdrawView """
+    laki = Laki.objects.get(pk=pk)
+    current_user = request.user
+
+    if request.method == 'POST':
+        form_manual = ManualForm(request.POST)
+
+        if form_manual.is_valid():
+            amount = form_manual.cleaned_data['amount']
+
+            laki.konto.withdraw(amount, current_user)
+            laki.konto.save()
+
+    return redirect('laki-detail', pk=pk)
+
+
+@login_required
 def LakiKiosk(request, pk):
     """ LakiKioskView """
     today = 0
@@ -105,6 +141,14 @@ def LakiKiosk(request, pk):
         form_manual = ManualForm(request.POST)
 
         if form.is_valid():
+            if form.cleaned_data['betrag'] == "einzahlung":
+                amount = form.cleaned_data['betrag']
+
+                laki.konto.deposit(amount, current_user)
+                laki.konto.save()
+
+                return redirect('laki-kiosk', pk)
+
             if form.cleaned_data['betrag'] != "0":
                 amount = Decimal(form.cleaned_data['betrag'])/100
 
@@ -114,13 +158,12 @@ def LakiKiosk(request, pk):
                 return redirect('laki-kiosk', pk)
 
         if form_manual.is_valid():
-            #if "amount" in form_manual:
-                amount = form_manual.cleaned_data['amount']
+            amount = form_manual.cleaned_data['amount']
 
-                laki.konto.withdraw(amount, current_user)
-                laki.konto.save()
+            laki.konto.withdraw(amount, current_user)
+            laki.konto.save()
 
-                return redirect('kiosk-overview')
+            return redirect('kiosk-overview')
 
     else:
         form = KioskForm()

@@ -44,11 +44,12 @@ class Konto(models.Model):
         else:
             return False
 
-    def deposit(self, amount):
+    def deposit(self, amount, user):
         """ Konti deposit function """
         self.balance += amount
         buchung = Buchung()
         buchung.amount = amount
+        buchung.user = user
         buchung.konto = self
         buchung.balance = self.balance
         buchung.type = 'deposit'

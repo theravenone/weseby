@@ -10,6 +10,7 @@ class BuchungResource(resources.ModelResource):
     class Meta:
         model = Buchung
         fields = ('datetime', 'balance', 'amount', 'type',)
+        export_order = ('datetime', 'balance', 'amount', 'type',)
 
 
 class ZeltResource(resources.ModelResource):
