@@ -12,7 +12,7 @@ import datetime
 import csv
 from django.core import serializers
 
-from .models import Laki, Zelt, Konto
+from .models import Laki, Zelt, Konto, Buchung
 from .resources import *
 from .forms import LakiForm, KioskForm, ManualForm
 
@@ -58,6 +58,7 @@ def KioskDetail(request, pk):
 def LakiDetail(request, pk):
     """ LakiDetailView """
     laki = Laki.objects.get(pk=pk)
+    current_user = request.user
 
     buchungen = laki.konto.buchung_set.all().order_by('-datetime')
 
@@ -67,7 +68,7 @@ def LakiDetail(request, pk):
         if form.is_valid():
             amount = form.cleaned_data['amount']
 
-            laki.konto.withdraw(amount)
+            laki.konto.withdraw(amount, current_user)
             laki.konto.save()
 
             return redirect('laki-list')
@@ -92,6 +93,7 @@ def LakiKiosk(request, pk):
 
     laki = Laki.objects.get(pk=pk)
     buchungen_withdraw = laki.konto.buchung_set.all().filter(datetime__range=(date_yesterday, date_tomorrow)).order_by('-datetime')
+    current_user = request.user
 
     for buchung in buchungen_withdraw:
         #check if buchung from today
@@ -106,7 +108,7 @@ def LakiKiosk(request, pk):
             if form.cleaned_data['betrag'] != "0":
                 amount = Decimal(form.cleaned_data['betrag'])/100
 
-                laki.konto.withdraw(amount)
+                laki.konto.withdraw(amount, current_user)
                 laki.konto.save()
 
                 return redirect('laki-kiosk', pk)
@@ -115,7 +117,7 @@ def LakiKiosk(request, pk):
             #if "amount" in form_manual:
                 amount = form_manual.cleaned_data['amount']
 
-                laki.konto.withdraw(amount)
+                laki.konto.withdraw(amount, current_user)
                 laki.konto.save()
 
                 return redirect('kiosk-overview')
@@ -174,8 +176,37 @@ def LagerDetail(request):
 
     url = static('kiosk/import/lakis.csv')
     return render(request, 'kiosk/lager_detail.html', {
-            'url' : url
+        'url' : url
         })
+
+
+@login_required
+def ExportBalanceZelt(request):
+    """ ExportBalanceZelt View"""
+
+    zelt_recource = ZeltResource()
+    dataset = zelt_recource.export()
+
+    response = HttpResponse(dataset.csv, content_type='text/csv')
+    response['Content-Dispostion'] = 'attachement; filename="zelt.csv"'
+
+    return response
+
+
+@login_required
+def KontoAuszug(request, pk):
+    """ KontoAuszug View"""
+    laki = Laki.objects.get(pk=pk)
+    laki_konto = laki.konto
+
+    buchung_recource = BuchungResource()
+    queryset = Buchung.objects.filter(konto = laki_konto)
+    dataset = buchung_recource.export(queryset)
+
+    response = HttpResponse(dataset.csv, content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="auszug.csv"'
+
+    return response
 
 
 @login_required
@@ -206,7 +237,7 @@ def ImportDetail(request):
                     adresse = row["Ort"].split(" ")
                     new_laki.plz = adresse[0]
                     new_laki.ort = adresse[1]
-                
+
                 if row["Strasse"]:
                     new_laki.strase = row["Strasse"]
 

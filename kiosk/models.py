@@ -56,12 +56,13 @@ class Konto(models.Model):
 
         return True
 
-    def withdraw(self, amount):
+    def withdraw(self, amount, user):
         """ Konto withdraw frunction """
         if self.check_withdraw(amount):
             self.balance -= amount
             buchung = Buchung()
             buchung.amount = amount
+            buchung.user = user
             buchung.konto = self
             buchung.balance = self.balance
             buchung.type = 'withdraw'
@@ -74,6 +75,7 @@ class Konto(models.Model):
 class Buchung(models.Model):
     """ Model class Buchung """
     konto = models.ForeignKey(Konto, on_delete=models.SET_NULL, null=True)
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     balance = models.DecimalField(default=0, max_digits=6, decimal_places=2)
     amount = models.DecimalField(default=0, max_digits=6, decimal_places=2)
     datetime = models.DateTimeField(default=timezone.now)

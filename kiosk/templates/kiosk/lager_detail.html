@@ -18,6 +18,14 @@
                 </form>
             </div>
         </div>
+        <div class="row">
+            <div class="col">
+                <form action="{% url 'zelt-export'%}" method="post">
+                    {% csrf_token %}
+                    <button name="zeltexport" type="submit" class="btn btn-primary">Kontostände exportieren</button>
+                </form>
+            </div>
+        </div>
     </div>
 
 </div>

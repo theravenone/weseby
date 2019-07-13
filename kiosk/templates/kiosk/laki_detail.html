@@ -23,6 +23,10 @@
                     Betrag: {{form.amount}}
                     <button name="betrag" value="0" type="submit" class="btn btn-primary">Abbuchen</button>
                 </form>
+                <form action="{% url 'konto-auszug' laki.id%}" method="post">
+                    {% csrf_token %}
+                    <button name="kontoexport" type="submit" class="btn btn-primary">Kontoauszug erstellen</button>
+                </form>
             </div>
         </div>
         <div class="row">
@@ -38,7 +42,7 @@
         </div>
     </div>
 
-    <div class="col-3">
+    <div class="col-4">
         <table class="table table-striped table-bordered table-hover table-sm">
             <thead>
                 <tr>
@@ -46,6 +50,7 @@
                     <th scope="col">Betrag</th>
                     <th scope="col">Kontostand</th>
                     <th scope="col">Typ</th>
+                    <th scope="col">User</th>
                 </tr>
             </thead>
             {% for buchung in buchungen %}
@@ -54,12 +59,13 @@
                 <td>{{buchung.amount}} €</td>
                 <td>{{buchung.balance}} €</td>
                 <td>{{buchung.type}}</td>
+                <td>{{buchung.user}}</td>
             </tr>
             {% endfor %}
         </table>
     </div>
 
-    <div class="col-4">
+    <div class="col-3">
         <img class="card-img-top justify-content-center img-fluid" src="{% get_static_prefix %}kiosk/lakis/{{laki.id}}.jpg" alt="Lakibild">     
     </div>
 
