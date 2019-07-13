@@ -100,23 +100,33 @@ def LakiKiosk(request, pk):
 
     if request.method == 'POST':
         form = KioskForm(request.POST)
+        form_manual = ManualForm(request.POST)
 
         if form.is_valid():
-            if form.cleaned_data['betrag'] == "0":
-                amount = form.cleaned_data['amount']
-            else:
+            if form.cleaned_data['betrag'] != "0":
                 amount = Decimal(form.cleaned_data['betrag'])/100
 
-            laki.konto.withdraw(amount)
-            laki.konto.save()
+                laki.konto.withdraw(amount)
+                laki.konto.save()
 
-            return redirect('kiosk-overview')
+                return redirect('laki-kiosk', pk)
+
+        if form_manual.is_valid():
+            #if "amount" in form_manual:
+                amount = form_manual.cleaned_data['amount']
+
+                laki.konto.withdraw(amount)
+                laki.konto.save()
+
+                return redirect('kiosk-overview')
 
     else:
         form = KioskForm()
+        form_manual = ManualForm()
 
     return render(request, 'kiosk/laki_kiosk.html', {
         'form': form,
+        'form_manual' : form_manual,
         'laki': laki,
         'buchungen': buchungen_withdraw,
         'today': today

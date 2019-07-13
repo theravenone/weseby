@@ -18,6 +18,12 @@
 
         <form action="#" method="post">
             {% csrf_token %}
+            Betrag: {{form_manual.amount}}
+            <button name="betrag" value="0" type="submit" class="btn btn-primary">Abbuchen</button>
+        </form>
+
+        <form action="#" method="post">
+            {% csrf_token %}
             <div class="row">
                 <div class="col">
                     <table class="table_btn">
