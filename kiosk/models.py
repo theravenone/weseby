@@ -4,23 +4,6 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 
 
-class Zeltlager(models.Model):
-    """ Model Zeltlager """
-    jahr = models.IntegerField(default=1900)
-    haelfte = models.IntegerField(default=1)
-    kasse = models.DecimalField(default=0, max_digits=6, decimal_places=2)
-
-
-class Zelt(models.Model):
-    """ Model Zelt """
-    zeltnummer = models.IntegerField(default=1)
-    zeltname = models.CharField(max_length=20)
-    zeltlager = models.ForeignKey(Zeltlager, on_delete=models.SET_NULL, null=True)
-
-    def __str__(self):
-        return str(self.zeltnummer)
-
-
 class Konto(models.Model):
     """ Model Konto """
     kontoNr = models.CharField(max_length=10)
@@ -45,7 +28,7 @@ class Konto(models.Model):
             return False
 
     def deposit(self, amount, user):
-        """ Konti deposit function """
+        """ Konto deposit function """
         self.balance += amount
         buchung = Buchung()
         buchung.amount = amount
@@ -71,6 +54,25 @@ class Konto(models.Model):
             return True
         else:
             return False
+
+
+class Zeltlager(models.Model):
+    """ Model Zeltlager """
+    jahr = models.IntegerField(default=1900)
+    haelfte = models.IntegerField(default=1)
+    kasse = models.DecimalField(default=0, max_digits=6, decimal_places=2)
+    lagerkonto = models.ForeignKey(Konto, on_delete=models.SET_NULL, null=True)
+
+
+class Zelt(models.Model):
+    """ Model Zelt """
+    zeltnummer = models.IntegerField(default=1)
+    zeltname = models.CharField(max_length=20)
+    zeltlager = models.ForeignKey(Zeltlager, on_delete=models.SET_NULL, null=True)
+    zeltkonto = models.ForeignKey(Konto, on_delete=models.SET_NULL, null=True)
+
+    def __str__(self):
+        return str(self.zeltnummer)
 
 
 class Buchung(models.Model):

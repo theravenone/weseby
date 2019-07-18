@@ -71,6 +71,9 @@ def LakiDetail(request, pk):
             laki.konto.withdraw(amount, current_user)
             laki.konto.save()
 
+            laki.zelt.zeltkonto.withdraw(amount, current_user)
+            laki.zelt.zeltkonto.save()
+
             return redirect('laki-list')
 
     else:
@@ -98,6 +101,12 @@ def LakiDeposit(request, pk):
             laki.konto.deposit(amount, current_user)
             laki.konto.save()
 
+            laki.zelt.zeltkonto.deposit(amount, current_user)
+            laki.zelt.zeltkonto.save()
+
+            laki.zelt.zeltlager.lagerkonto.deposit(amount, current_user)
+            laki.zelt.zeltlager.lagerkonto.save()
+
     return redirect('laki-detail', pk=pk)
 
 
@@ -115,6 +124,12 @@ def LakiWithdraw(request, pk):
 
             laki.konto.withdraw(amount, current_user)
             laki.konto.save()
+
+            laki.zelt.zeltkonto.withdraw(amount, current_user)
+            laki.zelt.zeltkonto.save()
+
+            laki.zelt.zeltlager.lagerkonto.withdraw(amount, current_user)
+            laki.zelt.zeltlager.lagerkonto.save()
 
     return redirect('laki-detail', pk=pk)
 
@@ -147,6 +162,12 @@ def LakiKiosk(request, pk):
                 laki.konto.deposit(amount, current_user)
                 laki.konto.save()
 
+                laki.zelt.zeltkonto.deposit(amount, current_user)
+                laki.zelt.zeltkonto.save()
+
+                laki.zelt.zeltlager.lagerkonto.deposit(amount, current_user)
+                laki.zelt.zeltlager.lagerkonto.save()
+
                 return redirect('laki-kiosk', pk)
 
             if form.cleaned_data['betrag'] != "0":
@@ -155,6 +176,12 @@ def LakiKiosk(request, pk):
                 laki.konto.withdraw(amount, current_user)
                 laki.konto.save()
 
+                laki.zelt.zeltkonto.withdraw(amount, current_user)
+                laki.zelt.zeltkonto.save()
+
+                laki.zelt.zeltlager.lagerkonto.withdraw(amount, current_user)
+                laki.zelt.zeltlager.lagerkonto.save()
+
                 return redirect('laki-kiosk', pk)
 
         if form_manual.is_valid():
@@ -162,6 +189,13 @@ def LakiKiosk(request, pk):
 
             laki.konto.withdraw(amount, current_user)
             laki.konto.save()
+
+            laki.zelt.zeltkonto.withdraw(amount, current_user)
+            laki.zelt.zeltkonto.save()
+
+            laki.zelt.zeltlager.lagerkonto.withdraw(amount, current_user)
+            laki.zelt.zeltlager.lagerkonto.save()
+
 
             return redirect('kiosk-overview')
 
@@ -215,11 +249,44 @@ def simple_upload(request):
 
 @login_required
 def LagerDetail(request):
-    """ LakiKioskView """
+    """ LagerDetailView """
+
+    buchungen_zelt1 = Zelt.objects.get(pk=1).zeltkonto.buchung_set.all().order_by('-datetime')
+    buchungen_zelt2 = Zelt.objects.get(pk=2).zeltkonto.buchung_set.all().order_by('-datetime')
+    buchungen_zelt3 = Zelt.objects.get(pk=3).zeltkonto.buchung_set.all().order_by('-datetime')
+    buchungen_zelt4 = Zelt.objects.get(pk=4).zeltkonto.buchung_set.all().order_by('-datetime')
+    buchungen_zelt5 = Zelt.objects.get(pk=5).zeltkonto.buchung_set.all().order_by('-datetime')
+    buchungen_zelt6 = Zelt.objects.get(pk=6).zeltkonto.buchung_set.all().order_by('-datetime')
+    buchungen_zelt7 = Zelt.objects.get(pk=7).zeltkonto.buchung_set.all().order_by('-datetime')
+    buchungen_zelt8 = Zelt.objects.get(pk=8).zeltkonto.buchung_set.all().order_by('-datetime')
+    buchungen_zelt9 = Zelt.objects.get(pk=9).zeltkonto.buchung_set.all().order_by('-datetime')
+    buchungen_zelt10 = Zelt.objects.get(pk=10).zeltkonto.buchung_set.all().order_by('-datetime')
+    buchungen_zelt11 = Zelt.objects.get(pk=11).zeltkonto.buchung_set.all().order_by('-datetime')
+    buchungen_zelt12 = Zelt.objects.get(pk=12).zeltkonto.buchung_set.all().order_by('-datetime')
+    buchungen_zelt13 = Zelt.objects.get(pk=13).zeltkonto.buchung_set.all().order_by('-datetime')
+    buchungen_zelt14 = Zelt.objects.get(pk=14).zeltkonto.buchung_set.all().order_by('-datetime')
+    buchungen_zelt15 = Zelt.objects.get(pk=15).zeltkonto.buchung_set.all().order_by('-datetime')
+    buchungen_lager = Zelt.objects.get(pk=1).zeltlager.lagerkonto.buchung_set.all().order_by('-datetime')
 
     url = static('kiosk/import/lakis.csv')
     return render(request, 'kiosk/lager_detail.html', {
-        'url' : url
+        'url' : url,
+        'buchungen_zelt1' : buchungen_zelt1,
+        'buchungen_zelt2' : buchungen_zelt2,
+        'buchungen_zelt3' : buchungen_zelt3,
+        'buchungen_zelt4' : buchungen_zelt4,
+        'buchungen_zelt5' : buchungen_zelt5,
+        'buchungen_zelt6' : buchungen_zelt6,
+        'buchungen_zelt7' : buchungen_zelt7,
+        'buchungen_zelt8' : buchungen_zelt8,
+        'buchungen_zelt9' : buchungen_zelt9,
+        'buchungen_zelt10' : buchungen_zelt10,
+        'buchungen_zelt11' : buchungen_zelt11,
+        'buchungen_zelt12' : buchungen_zelt12,
+        'buchungen_zelt13' : buchungen_zelt13,
+        'buchungen_zelt14' : buchungen_zelt14,
+        'buchungen_zelt15' : buchungen_zelt15,
+        'buchungen_lager': buchungen_lager
         })
 
 
@@ -243,7 +310,7 @@ def KontoAuszug(request, pk):
     laki_konto = laki.konto
 
     buchung_recource = BuchungResource()
-    queryset = Buchung.objects.filter(konto = laki_konto)
+    queryset = Buchung.objects.filter(konto=laki_konto)
     dataset = buchung_recource.export(queryset)
 
     response = HttpResponse(dataset.csv, content_type='text/csv')
@@ -254,8 +321,9 @@ def KontoAuszug(request, pk):
 
 @login_required
 def ImportDetail(request):
-    """ LakiUploadView"""
+    """ ImportDetailView"""
 
+    current_user = request.user
     #url = static('kiosk/import/lakis.csv')
     url = '/home/sven/enviroments/weseby/kiosk/static/kiosk/import/lakis.csv'
     with open(url, mode='r') as csv_file:
@@ -263,10 +331,11 @@ def ImportDetail(request):
         for row in csv_reader:
             lakis_db = Laki.objects.filter(vorname=row["Vorname"]).filter(nachname=row["Name"])
             if not lakis_db:
+                amount = Decimal(row["Geld"])
                 new_konto = Konto()
                 new_konto.kontoNr = row["Konto-Nr."]
                 new_konto.save()
-                new_konto.deposit(float(row["Geld"]))
+                new_konto.deposit(amount, current_user)
                 new_konto.save()
 
                 new_laki = Laki()
@@ -315,5 +384,12 @@ def ImportDetail(request):
                 new_laki.zelt = Zelt.objects.get(pk=row["Zelt"])
                 new_laki.konto = new_konto
                 new_laki.save()
+
+
+                new_laki.zelt.zeltkonto.deposit(amount, current_user)
+                new_laki.zelt.zeltkonto.save()
+
+                new_laki.zelt.zeltlager.lagerkonto.deposit(amount, current_user)
+                new_laki.zelt.zeltlager.lagerkonto.save()
 
     return redirect('lager-detail')
