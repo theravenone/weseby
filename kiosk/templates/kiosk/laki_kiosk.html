@@ -63,7 +63,7 @@
                                 <button name="betrag" value="45" type="submit" class="btn btn-primary btn-lg btn_money">45 Cent</button>
                             </td>
                             <td>
-                                <button name="2betrag00" value="50" type="submit" class="btn btn-primary btn-lg btn_money">50 Cent</button>
+                                <button name="betrag" value="50" type="submit" class="btn btn-primary btn-lg btn_money">50 Cent</button>
                             </td>
                             <td>
                                 <button name="betrag" value="70" type="submit" class="btn btn-primary btn-lg btn_money">70 Cent</button>
@@ -74,7 +74,7 @@
                                 <button name="betrag" value="90" type="submit" class="btn btn-primary btn-lg btn_money">90 Cent</button>
                             </td>
                             <td colspan="3">
-                                <button name="betrag" value="-15" type="submit" class="btn btn-primary btn-lg btn_money">Pfand zurück</button>
+                                <button name="betrag" value="-10" type="submit" class="btn btn-primary btn-lg btn_money">Pfand zurück</button>
                             </td>
                         </tr>
                     </table>
@@ -87,7 +87,7 @@
         <div class="row">
             <div class="card" id="card_hinweis">
                 <div class="card-header">Hinweis</div>
-                <div class="card-body">{{laki.hinweis}}</div>
+                <div class="card-body card-hinweis">{{laki.hinweis}}</div>
             </div>
         </div>
         <div class="row">
@@ -112,6 +112,7 @@
 
     <div class="col-3">    
         <img class="img-fluid" src="{% get_static_prefix %}kiosk/lakis/{{laki.id}}.jpg" alt="Laikibild">
+        <a href="{% url 'kiosk-overview' %}" class="btn-zurueck">zurück zur Kioskübersicht</a>
     </div>
         
 

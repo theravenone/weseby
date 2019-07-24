@@ -67,7 +67,7 @@ class Zeltlager(models.Model):
 class Zelt(models.Model):
     """ Model Zelt """
     zeltnummer = models.IntegerField(default=1)
-    zeltname = models.CharField(max_length=20)
+    zeltname = models.CharField(max_length=50)
     zeltlager = models.ForeignKey(Zeltlager, on_delete=models.SET_NULL, null=True)
     zeltkonto = models.ForeignKey(Konto, on_delete=models.SET_NULL, null=True)
 

@@ -16,7 +16,8 @@ class LakiAdmin(ImportExportModelAdmin):
 class ZeltAdmin(ImportExportModelAdmin):
     pass
 
-# admin.site.register(Zelt)
+#admin.site.register(Zelt)
 admin.site.register(Laki, LakiAdmin)
 admin.site.register(Konto)
 admin.site.register(Zeltlager)
+admin.site.register(Buchung)

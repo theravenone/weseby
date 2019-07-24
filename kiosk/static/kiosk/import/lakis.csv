@@ -1,145 +1,138 @@
-Name;Vorname;Zelt;KK-Karte;Impfpass;Geld;Elternzettel;Arztzettel;Geboren;Konto-Nr.;Geb.kind;WFS;Geschlecht;Tel_pr;Handy;Strasse;Ort
-Gercke;Hannah;1;p;j;30;;;2007-10-25;1c25;;;w;04623-185403;;Quinkkjer 16;24860 Böklund
-Henningsen;Jule;1;j;j;30;j;;2008-01-02;1b0b;;;w;04623-345;;Langseestr. 4 a;24890 Süderfahrenstedt
-Gercke;Leonie;1;p;j;30;j;;2007-10-25;1cc4;;;w;04623-185403;;Quinkkjer 16;24860 Böklund
-Steinert;Liana;1;j;j;39.51;j;;2009-06-04;1ac3;;;w;04623-185861;0152-56809066;Quinkkjer 36;24860 Böklund
-Ullmann;Lina Mireille;1;j;j;55;j;j;2007-02-10;1dac;;;w;0172-4298059;;Kanzleistr. 33;24943 Flensburg
-Voß;Maya;1;j;j;30;j;j;2006-12-04;1c76;;;w;04621-20152;0173-8543262;Rosenstr. 9 a;24867 Dannewerk
-Purra;Melanie;1;j;j;50;j;;2008-10-17;1c20;;;w;04621-3823363;015204089400;Bismarckstr. 21;24837 Schleswig
-Henningsen;Nele;1;j;j;32;j;j;2008-02-04;1d1a;;;w;0152-08821464;;Schleswiger Str. 2;24890 Süderfahrenstedt
-Nissen;Svea;1;j;j;30;j;j;2009-02-20;1a8d;;;w;04354-8090915;0172-1809860;Möhlhorster Weg 28 a;24357 Fleckeby
-Schicke;Vanessa;1;j;j;30;j;j;;1afc;;;;;;;
-Hornby;Amirah;2;j;j;30;j;;2009-06-24;3e38;;;w;0176-983605523;;Am Schulwald 1;24398 Brodersby
-Henzel;Emily;2;j;j;30;j;j;2009-05-13;4a4e;;;w;;;Stettiner Str. 16;24837 Schleswig
-Gaentzsch;Franziska;2;j;j;30;j;j;2009-02-01;4a53;;;w;04883-904252;0152-24118741;Stapelhomer Ring 6 a;25868 Norderstapel
-Asser;Kaya;2;j;j;30;j;j;2009-02-23;3f9b;;;w;04644-2859819;;Am Ziegeleiteich 1;24398 Karby
-Caspersen;Lana Leonie;2;j;j;30;j;;2008-09-17;3da7;;;w;04633-4220388;0172-2994160;Meiereistr. 6;24986 Mittelangeln OT Satrup
-Baklinski;Lea;2;j;j;40;j;j;2008-12-26;3fd5;;;w;04630-9678580;0177-7977559;Barderuper Str. 12 a;24988 Oeversee
-Reifferscheid;Luna;2;j;j;20;j;j;2007-12-06;3e3c;;;w;0461-1682318;0163-7187543;Hermine-Knuth-Str. 10 a;24955 Harrislee
-Simon;Maja;2;j;j;30;j;j;2009-03-30;4b2b;;;w;04638-8029840;;Stapelhomer We 53;24988 Oeversee
-Buck;Mariella;2;p;n;30;j;;;2e6e;;;;;;;
-Hesse;Mila;2;j;j;30;j;j;2008-07-25;2df4;ja;;w;04644-970812;;Eckernförder Str. 49;24398 Karby
-Bloeck;Celina;3;j;j;30;j;j;2006-12-08;5b03;;;w;04621-991545;0176-56221157;Ahornweg 4;24866 Busdorf
-Thimsen;Eileen;3;j;j;38.5;j;j;2008-05-11;5f12;;;w;04604-620;0151-11532855;Nordhackstedter Str. 15;24969 Lindewitt
-Tabel;Hedda;3;j;j;30;j;;2006-07-11;4b19;ja;;w;04639-7587;;Roter Weg 7;24980 Nordhackstedt
-Tüxen;Isabel;3;j;j;30;j;j;2007-08-10;5e96;;;w;04621-29966;0172-9177633;Schützenredder 6;24837 Schleswig
-Krause;Kathleen;3;j;j;30;j;j;2006-08-06;6a58;;;w;04623-1771;;Schleswiger Str. 53;24860 Böklund
-Wiemeier;Kim Lykka;3;j;j;30;j;j;;6A52;;;;;;;
-Thomsen;Leonie;3;j;j;40;j;;2006-04-25;4e78;;;w;04621-22736;martinathomsen1971@web.de;Moorschlag 9;24866 Busdorf
-Kruse;Olivia;3;j;j;30;j;j;2007-06-14;5ee4;;;w;0152-21915767;;Röhmkerweg 15;24879 Idstedt
-Tabel;Stella;3;j;j;30;;j;2007-09-12;4cc9;;;w;04639-7587;;Roter Weg 7;24980 Nordhackstedt
-Czerwenka;Tassia;3;j;n;30;;j;2007-08-07;5d8c;;F;w;04641-9896280;0174-2675573;Ruruper Str. 4;24392 Norderbrarup
-Lorenzen;Bo Jeppe;4;j;j;30;;;2007-08-03;22af;;;m;04605-773;0152-55915966;Hauptstr. 1 a;24994 Medelby
-Andresen;Dominik;4;j;j;30;;j;2007-08-22;8fb9;;;m;04622-189831;0160-96677544;Lange Str. 9;24894 Tolk
-Schulte;Jonas Emilian;4;j;j;0;;j;;8fa3;;;;;;;
-Rohde;Kilian;4;n;n;30;;j;2008-01-17;22a8;;;m;04621-488982;;Kreuzstr. 20;24866 Busdorf
-Putzke;Lucas Heiko;4;j;n;29;;;2006-05-22;21a1;;;m;04331-6641044;01520-3193994;Ostlandstr. 19;24768 Rendsburg
-Fey;Mathias;4;j;j;30;;j;2005-12-03;24c7;;;m;04625-7006;;Auwiesen 3;24887 Silberstedt
-Paulsen;Mika Marcel;4;j;j;30;;j;;9bdb;;;;;;;
-Kühl;Navid;4;j;j;25;;j;2007-11-29;8e92;;F;m;04622-428451;0178-7700888;Pastoratsweg 8;24894 Tolk
-Schulte;Peer Ole;4;j;j;30;;;2008-06-07;8e43;;;m;04623-187742;0160-8824744;Obere Teichstr. 11;24860 Böklund
-Bullok;Tommy Mads;4;j;j;40;;j;2007-12-21;24b4;;;m;04627-184714;0174-3750515;Hauptstr. 88 a;24869 Bünge/Dörpstedt
-Kessler;Aiko;5;j;j;40;;j;2005-08-08;75ec;;;m;04641-9871911;0152-59442124;Hasselholzstr. 2;24888 Steinfeld
-Czerwenka;Dimitrij;5;j;n;30;;j;2006-03-13;65d4;;F;m;04641-9896280;0174-2675573;Ruruper Str. 4;24392 Norderbrarup
-Priess;Finn Niklas;5;j;j;30;;;2005-10-21;74b4;;;m;04622-4639787;0172-8360014;An der Landesstr. 13 c;24893 Scholderup
-Bünte;Jannik;5;j;j;30;;;2007-05-29;66fd;;;m;04351-470212;;Moränenweg 55;24340 Eckernförde
-Lorenzen;Justus;5;j;j;30;;;;69dc;;;;;;;
-Müller;Lennard;5;j;j;20;;;2009-08-25;73d7;;;m;04641-9882994;0151-64956834;Raiffeisenstr. 2;24888 Steinfeld
-Lorenzen;Linus;5;j;j;30;;;;70ae;;;;;;;
-Lorenzen;Loyd;5;j;j;30;;;;73ce;;;;;;;
-Deiß;Paul;5;j;j;30;;;2004-09-25;70c6;;;m;04631-5644657;0152-23236101;Hauslücke 4;24999 Wees
-Lehmann;Ante;6;j;n;30;;;2009-01-24;7e30;;;m;04621-9892660;0170-7324068;Wohlerskoppel 1 a;24857 Fahrdorf
-Himstedt;Ben;6;j;j;33;;;2009-10-03;3aa9;;F;m;04638-2224674;0160-7390796;Schmedebyer Str. 38;24885 Sieverstedt
-Voelkers;Finn;6;j;j;30;;;2009-08-08;9e27;;F;m;0157-74601560;;Wyker Str. 11;24376 Kappeln
-Milke;Julian;6;j;j;30;;;2008-09-23;9bb2;;;m;04627-184979;0172-4349233;Hauptstr. 86;24869 Dörpstedt
-Thomsen;Lasse;6;j;j;30;;;;9d58;;;;;;;
-Skehr;Leif;6;j;j;40;;;2006-03-19;8a04;;;m;;;Thorwald 5;24885 Sieverstedt
-Ehlers;Piet;6;j;j;30;;;2009-05-30;8ae6;;S;m;;0176-62054069;Husarenhof 7 a;22043 Hamburg
-Jürgensen;Renke;6;j;j;33.07;;;2009-03-14;8c3b;;;m;04624-803500;0173-5251412;Sesamstr. 2;24872 Groß Rheide
-Goldmann;Tjorben Matthis;6;j;n;30;;;2009-06-07;9c47;;;m;04624-3185;;Lütte Koppel 1;24817 Tetenhusen
-Voigt;Vincent;6;j;j;25;;;2008-02-10;7dfd;;;m;0176-39997910;0176-39985967;Spanger Damm 19;24869 Dörpstedt
-Borchardt;Bo Lasse;7;j;j;30;;;2007-11-29;53a1;;;m;04352-918380;0151-12266188;Bi de School 19;24364 Holzdorf
-Sörnsen;Bosse;7;n;j;30;;;2006-12-30;26cb;;;m;04644-9737881;0170-5538662;Karlsburg 36;24398 Winnemark
-Hübner;Linus;7;j;j;30;;;2008-07-02;31cb;;;m;04642-6969632;0174-4980545;Schulstr. 18;24376 Kappeln
-Hübner;Louis;7;j;j;30;;;2010-01-15;35c8;;;m;04642-6969632;0174-4980545;Schulstr. 18;24376 Kappeln
-Hübner;Lovis;7;j;j;30;;;2006-12-03;54af;;;m;04642-6969632;0174-4980545;Schulstr. 18;24376 Kappeln
-Hübner;Lucas;7;j;j;30;;;2005-10-16;35ac;;;m;04642-6969632;0174-4980545;Schulstr. 18;24376 Kappeln
-Leu;Lunis;7;j;j;40;;;2007-06-13;53fc;;;m;04621-3079880;;Lollfuß 69;24837 Schleswig
-Simon;Noah;7;j;j;30;;;2005-12-28;36e7;;;m;04638-8029840;;Stapelholmer Weg 53;24988 Oeversee
-Sörnsen;Oskar;7;n;j;30;;;2008-12-09;52a1;;;m;04644-9737881;0170-5538662;Karlsburg 36;24398 Winnemark
-Andresen;Rico;7;j;j;30;;;2005-09-09;25e4;;;m;04605-1266;0171-2367862;Hauptstr. 48 a;24994 Medelby
-Litschen;Aaron;8;p;n;30;;;2005-10-04;8ba0;;;m;04352-956780;0160-96443360;St. Johannes Stift 14;24351 Damp
-Beckmann;Bjarne;8;j;j;30;;;2008-02-22;8e1b;;;m;0163-7321277;;Bäckerweg 2;24357 Fleckeby
-Lehmann;David;8;j;n;30;;;2007-01-31;6e32;;;m;04621-9892662;0170-7324068;Wohlerskoppel 1 a;24857 Fahrdorf
-Beckmann;Hauke;8;j;j;31;;;2008-02-22;8cb9;;;m;0163-7321277;;Bäckerweg 2;24357 Fleckeby
-Tetzner;Jonas Leon;8;j;j;30;;;2008-01-23;8cf4;;;m;04624-4830947;0174-1830115;Rosenstr. 18;24848 Kropp
-Beeck;Justus;8;j;j;35;;;2008-01-27;8dcd;;;m;04354-809377;;Bramberg 2 a;24357 Fleckeby
-Matthiesen;Max;8;j;j;30;;;2007-04-20;6dd4;;;m;04621-993551;0157-57198626;St. Jürgener Str. 32;24837 Schleswig
-Schröder;Linus;8;;;30;;;2008-07-21;3ae4;ja;F;m;0157-57615553;;Hauptstr. 31 c;24855 Bollingstedt
-Borngräber;Ben-Luckas;9;j;j;30;;;2008-03-29;49fa;;;m;04642-9838024;0160-97366529;Dorfstr. 53;24376 Rabel
-Wunderling;Elias;9;j;j;30;;;2008-08-13;58e3;;;m;0461-1684192;0172-6887707;Hirschbogen 26;24941 Flensburg
-Petersen;Eric Luca;9;n;n;20;;;;59ec;;;;;;;
-Eggers;Felix;9;j;j;30;;;2009-11-06;64ca;;;m;04621-9778795;0176-56566427;Rehwinkel 6;24850 Lürschau
-Beck;Jorden Luca;9;j;j;30;;;2007-07-02;47f4;;F;m;04603-4279981;;Pastor-Witt-Str. 1 a;24873 Havetoft
-Schmidt;Kjell;9;j;j;30;;;2008-06-18;49f0;;;m;04638-7312;;Dorfstr. 8;24963 Jerrishoe
-Unger;Marlon;9;j;n;30;;;2008-02-10;50ff;;;m;04621-200864;0176-22968209;Zaunkönigweg 1;24837 Schleswig
-Beck;Nick;8;j;j;30;;;2010-02-25;3a0b;;F;m;04603-4279981;;Pastor-Witt-Str. 1 a;24873 Havetoft
-Haack;Ole;9;j;j;30;;;2007-12-06;3b16;;;m;04621-9843730;0176-32107284;Gartenweg 16;24850 Lürschau
-Lubas;Piet;9;n;j;30;;;2007-12-21;49ef;;S;m;04621-949393;0160-97632990;Seeberg 3;24850 Lürschau
-Himstedt;Bjarne;10;j;j;33;;;2006-12-30;55f4;;F;m;04638-2224674;0160-7390796;Schmedebyer Str. 38;24885 Sieverstedt
-Schulte;Finn Lukas;10;j;j;30;;;2006-08-26;55cf;;;m;04623-187742;0160-8824744;Obere Teichstr. 11;24860 Böklund
-Fels;Jakob;10;j;j;30;;;2006-01-12;55fe;;;m;04621-302742;;Wildbahn 13;24879 Neuberend
-Ogara;Jamal;10;j;j;20;;;2007-07-17;75af;ja;F;m;0152-24956350;;Süderacker 4;24980 Hörup
-Ogara;Kenneth;10;j;j;20;;;2005-09-23;55fb;;F;m;0152-24956350;;Süderacker 4;24980 Hörup
-Buck;Lennox;10;p;n;30;;;;58c0;;;;;;;
-Klußmeier;Mika;10;j;j;25;;;;56af;;;;;;;
-Schlechtweg;Cedric;11;p;n;30;;;2009-01-27;45c0;;;m;0173-9515080;;Mühlenstr. 41;24392 Süderbrarup
-Matthiesen;Jan-Hinnerk;11;j;j;35;;;2008-06-28;18af;;F;m;0152-26713746;;Dorfstr. 28;24986 Schnarup-Thumby
-Stade;Jos Maximilian;11;n;n;25;;;2008-11-27;22a0;;F;m;0162-7228433;;Güldenholmer Str. 1;24890 Süderfahrenstedt
-Beeck;Julian;11;j;j;35;;;2010-05-07;12be;;;m;04354-809377;;Bramberg 2 a;24357 Fleckeby
-Kliesing;Kilian;11;j;j;20;;;2009-04-17;18a9;;F;m;0174-5245381;;Süderholzer Str. 4;24986 Mittelangeln OT Rüde
-Schäfer;Kurt;11;j;j;30;;;2010-01-20;45e9;;;m;;;Kallehoe 57;24988 Oeversee
-Wilken;Luca;11;j;n;30;;;2009-08-28;38d5;;;m;04621-948040;0176-22775492;Moordiek 18 e;24837 Schleswig
-Ockert;Luis Till;11;j;j;30;;;2009-07-08;43d6;ja;;m;04621-200574;0175-2429458;Husumer Str. 17;24837 Schleswig
-Jänke;Maximilian Noel;11;j;n;30;;;2010-05-19;11fa;;;m;04354-6729027;;Möhlhorster Weg 40;24357 Fleckeby
-Hansen;Clara;12;j;j;30;;;2008-07-06;4e91;;;w;04631-7486;0171-8558771;Rudekamp 44;24960 Glücksburg
-Deiß;Elena;12;j;j;30;;;2007-11-12;4fe2;;;w;04631-5644657;0152-23236101;Hauslücke 4;24999 Wees
-Störte;Georgina;12;j;n;30;;;2007-10-28;4e7c;;S;w;04623-3033606;0151-50294313;Meiereistr. 7;24890 Süderfahrenstedt
-Kramp;Greta Mathilde;12;j;j;30;;;2007-07-18;4f56;ja;;w;04635-613;0160-5507057;Winderatt 3 d;24966 Sörup
-Legant;Jule;12;j;j;30;;;2008-06-17;3be3;;;w;04641-4364971;0162-1956227;Am Wendteich 16;24401 Böel
-Andresen;Jule Liv;12;j;j;30;;;2007-10-02;4fac;;;w;04605-1266;0171-2367862;Hauptstr. 48 a;24994 Medelby
-Juhre;Line;12;p;j;30;;;2008-02-28;3d91;;;w;04633-966654;0171-3654607;Nico-Diedrichsen-Weg 7;24986 Mittelangeln
-Brook;Michelle;12;j;j;35;;;2008-04-20;5a05;;;w;04642-964632;0152-56312974;Gartenstr. 1;24376 Kappeln
-Matthiesen;Zoe Marie;12;j;j;30;;;2008-05-30;5a49;;;w;04621-993551;0157-57198626;St. Jürgener Str. 32;24837 Schleswig
-Schröder;Charlotta;12;;;30;;;2009-09-27;3b4a;;F;w;0157-57615553;;Hauptstr. 31 c;24855 Bollingstedt
-Bünte;Alina;13;j;j;30;;;2005-07-29;83c9;;;w;04351-470212;;Moränenweg 55;24340 Eckernförde
-Zittrich;Anneke;13;j;j;40;;;2005-08-10;78bc;;;w;04621-855517;;Plettkoppel 10;24867 Dannewerk
-Lilienthal;Ava Sophia;13;j;n;20;;;2006-09-27;77dc;;;w;04621-9892329;0178-8093568;Aladinstieg 24;24837 Schleswig
-Thiesen;Francisca;13;j;j;35;;;2007-04-20;84c9;;;w;04885-901919;0152-27276522;Hersbarg 3;24861 Bergenhusen
-Gershoff;Hella;13;n;n;30;;;2005-09-20;83e1;;;w;04641-9862029;0151-15708261;Gangerschildmoor 1;24392 Wagersrott
-Baitz;Jette;13;n;n;30;;;2007-08-28;87fe;;;w;0160-4726520;;Rehwiese 7;24857 Fahrdorf
-Hähling;Leonie;13;j;j;30;;;2006-12-03;80ad;;;w;04885-554;;Am Hang 1;24899 Wohlde
-Fahje;Morena;13;j;j;25;;;2006-02-03;77ad;;F;w;0172-5812663;04621-9372416;Solterbeerenhof 26;24837 Schleswig
-Gläser;Paula;13;j;j;30;;;2005-11-03;88b8;;;w;04641-987282;0173-6097456;Hye 3;24392 Hye
-Fahje;Tyra Michelle;13;j;j;25;;;2007-02-17;77cb;;F;w;0172-5812663;04621-9372416;Solterbeerenhof 26;24837 Schleswig
-Wolf;Emyly;14;j;j;40;;;2006-04-06;6ff8;;S;w;04626-189434;0151-17289555;Goosholzer Str. 29;24896 Treia
-Goldmann;Ida Marit;14;j;n;30;;;2006-03-07;7ace;;;w;04624-3185;;Lütte Koppel 1;24817 Tetenhusen
-Sabin;Laura;14;j;j;40;;;2006-04-03;7d79;;;w;04624-8033210;;Schulstr. 15 a;24817 Tetenhusen
-Siewert;Leeann;14;Nachweis;j;20;;;2005-08-06;7dbb;;;w;04641-9883994;0151-64956834;Raiffeisenstr. 2;24888 Steinfeld
-Bauer;Leonie;14;j;j;35;;;2005-08-27;7d04;;;w;04621-990504;0170-2813980;Memeler Str. 83;24837 Schleswig
-Berg;Lilli;14;j;j;30;;;2005-06-07;7c0d;;S;w;04624-8025950;0176-97301695;Danziger Ring 28;24848 Kropp
-Pirkstin;Lina;14;n;n;30;;;;7d0f;;;;;;;
-Thomsen;Line Antonia;14;j;j;30;;;;6a89;;;;;;;
-Backen;Meggie;14;j;j;31;;;2007-05-11;7a8c;;;w;0461-34838;0160-3636303;Elbehof 6;24943 Flensburg
-Klinker;Wolke;14;j;j;30;;;2007-08-08;6b60;;S;w;04643-186968;0172-4234369;Süderholm 80;24395 Gelting
-Putzke;Alina Marie;15;j;n;30;;;2009-11-19;6c2d;;;w;04331-6641044;01520-3193994;Ostlandstr. 19;24768 Rendsburg
-Frischkemuth;Clara;15;n;j;20;;;2010-02-03;6c5b;;;w;04621-990941;0176-297601963;Nissensgang 7;24850 Schuby
-Wehnert;Emilie;15;j;j;15;;;2010-03-08;6c7b;;F;w;04609-852797;;Hermann-Löns-Weg 3;24852 Eggebek
-Strunz;Freya;15;j;n;30;;;2009-08-06;5a74;;F;w;0157-77057772;;Frörupholz 7;24988 Oeversee
-Freitag;Hannah Sophie;15;p;n;30;;;2009-08-07;6cb5;;;w;04624-450782;;Ivo-Braak-Ring 52;24848 Kropp
-Ogara;Hila;15;j;j;20;;;2009-08-10;6d70;;F;w;0152-24956350;;Süderacker 4;24980 Hörup
-Arnold;Isabelle;15;n;j;30;;;2009-10-18;6bf7;;;w;0032-478185225;;Rue de Sart Bozy 28;B - 6890 Smuid
-Albrecht;Jessica;15;j;j;30;;;2007-02-19;6b84;;;w;;;Langacker 16;24852 Langstedt
-Krause;Kaydee;15;j;n;30;;;2010-02-26;5b18;;F;w;04621-850210;;Husumer Str. 81;24837 Schleswig
-Himstedt;Maja;15;j;j;33;;;2009-10-04;;;F;w;04638-2224674;0160-7390796;Schmedebyer Str. 38;24885 Sieverstedt
-Matthiesen;Wienke Kirsti;15;j;j;20;;;2006-12-25;5acd;;;w;04638-898543;;Sandkoppel 19;24963 Jerrishoe
+Name;Vorname;Zelt;KK-Karte;Impfpass;Geld;Elternzettel;Arztzettel;Konto-Nr.;Geboren;Geb.kind;Strasse;Ort;Geschlecht;Tel_pr;Handy;WFS
+Albrecht;Jessica;3;j;j;20;;;0308;2007-02-19;;Langacker 16;24852 Langstedt;w;0152-33626799;;
+Alexander;Lia-Sophie;15;j;j;30;;;1505;2010-10-21;;Am Teich 3;24850 Schuby;w;04621-9787628;0151-41866624;
+Andresen;Jule;8;j;j;30;;;0807;2007-10-02;;Hauptstr. 48 a;24994 Medelby;w;04605-1266;0171-2367862;
+Arnold;Isabelle;15;j;j;30;;;1507;2009-10-18;;28, rue de Sart-Bozy;6890 Smuid;w;0032 61502866;0032 478185225;
+Ata;Donia;15;j;j;30;;;1501;2009-12-23;;Dorfstr. 10;24894 Twedt;w;04622-1617;;
+Baitz;Jette;13;p;n;30;;;1304;2007-08-28;;Rehwiese 7;24857 Fahrdorf;w;;;
+Baklinski;Lea;7;j;j;30;;;0704;2008-12-26;;Barderuper Str. 12 a;24988 Oeversee;w;04630-9678580;0177-7977559;
+Beck;Jordan Luca;2;j;n;30;;;0207;2007-07-02;;Petersburg 2;24891 Struxdorf;m;;0174-8851641;F
+Beck;Nick Samuel;11;j;n;30;;;1103;2010-02-25;;Petersburg 2;24891 Struxdorf;m;;0174-8851641;F
+Bloeck;Celina;13;j;j;30;;;1303;2006-12-08;;Ahornweg 4;24866 Busdorf;w;04621-991545;0175-56221157;
+Bobrel;Chiara;15;j;j;30;;;1503;2011-07-11;;Dorfstr. 10;24894 Twedt;w;04622-1617;;
+Bock;David;9;j;j;30;;;0905;2009-03-07;;Treeneblick 2 d;24852 Langstedt;m;04609-952171;0157-34787913;
+Borchardt;Bo Lasse;2;j;j;30;;;0204;2007-11-29;;Bi de School 19;24364 Holzdorf;m;04352-918380;0151-12266188;
+Borngräber;Ben-Luckas;9;j;n;35;;;0903;2008-03-29;;Dorfstr. 53;24376 Rabel;m;0172-4043572;;
+Böttiger;Caroline;7;j;j;23.20;;;0705;2007-12-14;;Bojum 1;24402 Esgrus;w;04637-677;;
+Brandt;Talia;4;j;j;30;;;0102;2011-01-02;;Bahnhofstr. 35;24966 Sörup;w;;0152-26879892;F
+Brek;Freya;13;j;j;30;;;1309;2007-05-25;;Angelner Str. 27;24837 Schleswig;w;04621-487344;;
+Brek;Norwin;12;j;j;30;;;1205;2010-08-15;;Angelner Str. 27;24837 Schleswig;m;04621-487344;;
+Brook;Michelle;3;j;j;30;;;0306;2008-04-20;;Gartenstr. 1;24376 Kappeln;w;04642-964632;0152-56312974;
+Bruhn;Jasper;2;j;j;30;;;0203;2008-01-11;;Dorfstr. 17;24869 Dörpstedt;m;;;
+Buck;Mariella;7;p;n;30;;;0702;2009-06-01;;Uns Huuskoppel 1;24808 Jevenstedt;w;04337-913199;;
+Buck;Lennox;10;p;n;30;;;1004;1900-01-01;;Uns Huuskoppel 1;24808 Jevenstedt;m;04337-913199;;
+Bünte;Jannik;5;j;j;30;;;0504;2007-05-29;;Moränenweg 55;24340 Eckernförde;m;04351-470212;;
+Claßen;Malte;5;j;j;30;;;0505;2007-09-20;;Sperlingsweg 2;24811 Owschlag;m;04336-999627;0171-7587505;
+Clausen;Jannis;12;j;j;30;;;1207;2010-12-03;;Busdorfer Str. 4;24837 Schleswig;m;04621-482257;0172-9548863;
+Diedrich;Tjark;10;j;j;30;;;1005;2007-02-20;;Itzehoer Chaussee 24;24808 Jevenstedt;m;04337-913462;0174-3015488;
+Eckert;Laura Dora;1;j;j;30;;;0102;2009-01-04;;Thomas-Mann-Str. 5;24939 Flensburg;w;;0152-21988827;
+Eggers;Felix;14;j;j;30;;;1405;2009-11-06;;Rehwinkel 6;24850 Lürschau;m;04621-9778795;0176-56566427;
+Fels;Sebastian;11;j;j;30;;;1107;2009-05-03;;Wildbahn 13;24879 Neuberend;m;;;
+Frahm;Lara Sophie;4;j;j;30;;;0410;2008-12-23;;Obere Dorfstr. 4;24848 Klein Rheide;w;;;
+Frischkemuth;Clara;15;p;j;30;;;1502;2010-02-03;;Nissensgang 7;24850 Schuby;w;04621-990941;0176-97601963;
+Gercke;Hannah;1;p;j;30;;;0104;2007-10-25;;Quinkkjer 16;24860 Böklund;w;04623-185401;0173-8502396;
+Goldmann;Tjorben Matthis;6;j;n;30;;;0602;2009-06-07;;Lütte Koppel 1;24817 Tetenhusen;m;;;
+Götz;Laura;15;j;j;25;;;1509;2011-04-26;;Hasselholzstr. 2;24888 Steinfeld;w;04641-9871911;0152-59442124;
+Grafe;Lea Djamila;4;j;j;30;;;0409;2010-02-05;;Ostseestr. 4;24376 Kappeln;w;04642-9250667;04642-9250668;
+Gülich;Leon;6;j;j;30;;;0605;2010-08-15;;Hudewald 10;24941 Flensburg;m;0461-8403461;0151-12750759;
+Günter;Jan Ole;9;p;n;30;;;0904;2008-10-30;;Langacker 12;24857 Fahrdorf;m;04621-986200;0174-9094944;
+Gutsche;Mariella;4;j;j;30;;;0407;2009-09-21;;Brombeerstr. 3 c;24405 Mohrkirch;w;04646-990060;0157-35290391;
+Haack;Ole;9;j;j;30;;;0906;2007-12-06;;Gartenweg 16;24850 Lürschau;m;04621-9843730;0176-32107284;
+Haan;Leonie;4;j;j;30;;;0405;2008-09-15;;Berliner Ring 15;24848 Kropp;w;04624 4516360;;F
+Hachmann;Jamie;12;j;j;30;;;1204;2008-08-24;;Ostseestr. 4;24376 Kappeln;m;04642-9250667;04642-9250668;
+Hähling;Leonie;13;j;j;30;;;1306;2006-12-03;;Am Hang 1;24899 Wohlde;w;04885-554;0176-54929575;
+Hansen;Ella;3;j;j;30;;;0302;2010-05-17;;Elkjer 28;24969 Großenwiehe;w;04639-7587;;
+Hansen;Clara;8;j;j;30;;;0809;2008-06-06;;Rudekamp 44;24960 Glücksburg;w;04631-7486;0171-8558771;
+Harder;Nike;13;j;j;30;;;1308;2007-11-01;;Klaus-Nanne-Str. 20;22457 Hamburg;w;040-5704327;0175-1586494;
+Harnisch;Ryan;14;j;n;30;;;1408;2011-02-09;;Friedrichsstr. 44;24837 Schleswig;m;04621-4217326;0162-3747225;
+Henningsen;Nele;8;j;j;30;;;0806;2008-02-04;;Schleswiger Str. 2;24890 Süderfahrenstedt;w;01520-8821464;;S
+Hentschel;Lena;13;j;j;30;;;1307;2007-10-18;;Zur Quelle 6;24976 Handewitt-Jarplund;w;0173-8802915;0152-54620153;
+Henzel;Emily Alessia;7;j;j;20;;;0706;2009-05-13;;Husumer Baum 43;24837 Schleswig;w;0178-6121416;;
+Heske;Nick;11;j;j;30;;;1105;2010-03-19;;Pöttacker 5;24860 Böklund;m;04623-185769;;
+Hesse;Mila;7;j;j;30;;;0703;2008-07-25;;Südhang 64;24398 Karby;w;04644-9739440;;
+Himstedt;Bjarne;5;j;j;30;;;0501;2006-12-30;;Schmedebyer Str. 38;24885 Sieverstedt;m;04638-2224674;0160-7200796;F
+Himstedt;Ben;11;j;j;30;;;1106;2009-10-03;;Schmedebyer Str. 38;24885 Sieverstedt;m;04638-2224674;0160-7200796;F
+Hornby;Amirah;7;j;j;30;;;0707;2009-06-24;;Am Schulwald 1;24398 Brodersby;w;0176-98305523;;S
+Jansen;Leonie-Sophie;4;j;j;0;;;0403;2007-09-23;;Königsberger Str. 19;24837 Schleswig;w;04621-9776255;;F
+Jansen;Emma-Marie;4;j;j;0;;;0408;2009-02-03;;Königsberger Str. 19;24837 Schleswig;w;04621-9976255;;F
+Jansen;Luca;14;j;j;0;;;1404;2010-09-17;;Königsberger Str. 19;24837 Schleswig;m;04621-9776255;;F
+Johannsen;Lukas;11;j;j;30;;;1106;2007-05-29;;Steenbarg 1;24878 Lottorf;m;04621-5304745;;
+Johannsen;Lotta;15;j;j;30;;;1510;2009-12-22;;Steenbarg 1;24878 Lottorf;w;04621-5304745;;
+Jürgensen;Renke;6;j;j;25;;;0607;2009-03-14;;Sesamstr. 2;24872 Groß Rheide;m;04624-803500;0173-5251412;
+Jürgensen;Leon;14;j;j;15;;;1403;2009-05-31;;Zum Dorfteich 8;24975 Husby;m;04634-93340;;
+Klinker;Sky;2;j;j;30;;;0202;2010-10-06;;Süderholm 80;24395 Gelting;m;;;
+Klinker;Wolke;8;j;j;30;;;0805;2007-08-08;;Süderholm 80;24395 Gelting;w;;;
+Kostrzewa;Valentina;13;j;j;30;;;1301;2008-07-10;;Kopenhagener Weg 13;25479 Ellerau;w;04106-625187;0152-31089014;
+Kramp;Greta Mathilde;8;j;j;30;;;0801;2007-07-18;;Winderatt 3 d;24966 Sörup;w;04635-613;0160-5507057;
+Kratzke;Calvin;11;j;j;25;;;1108;2008-05-23;;Westerlücke 5;24980 Hörup;m;04639-7836890;0176-70369031;F
+Krause;Kaydee;15;j;n;30;;;1508;2010-02-26;;Husumer Str. 81;24837 Schleswig;w;04621-850210;0151-74409489;
+Lehmann;David;6;j;j;30;;;0601;2007-01-31;;Wohlerskoppel 1 a;24857 Fahrdorf;m;04621-9892662;0170-7324068;
+Lehmann;Ante;6;j;j;30;;;0606;2009-01-24;;Wohlerskoppel 1 a;24857 Fahrdorf;m;04621-9892662;0170-7324068;
+Lorenzen;Bo Jeppe;10;j;j;30;;;1007;2007-08-03;;Hauptstr. 1 a;24994 Medelby;m;04605-773;0152-55915966;
+Lorenzen;Linus;5;j;j;30;;;0508;2006-07-19;;Am Dorfplatz 14e;24999 Wees;m;04631-407983;;
+Lorenzen;Loyd;5;j;j;30;;;0507;2008-05-02;;Am Dorfplatz 14e;24999 Wees;m;04631-407983;;
+Lorenzen;Justus;5;j;j;30;;;0506;2008-05-02;;Am Dorfplatz 14e;24999 Wees;m;04631-407983;;
+Ludvik;Lotta;8;j;j;30;;;0808;2007-04-24;;Moränenweg 71;24340 Eckernförde;w;04351-752877;0177-2001881;
+Ludvik;Mika;14;j;j;30;;;1402;2009-12-02;;Moränenweg 71;24340 Eckernförde;m;04351-752877;0177-2001881;
+Matthiesen;Laura;1;j;j;30;;;0108;2008-05-22;;Quinkkjer 7;24860 Böklund;w;0160-96823686;;
+Matthiesen;Jan-Hinnerk;9;j;j;30;;;0907;2008-06-28;;Dorfstr. 28;24891 Schnarup-Thumby;m;;0152-26713746;F
+Matthiesen;Wienke;3;j;n;20;;;0310;2006-12-25;;Sandkoppel 19;24963 Jerrishoe;w;04638-898543;0178-1638730;
+Mees;Thore;11;j;j;30;;;1101;2008-10-27;;Mittelreihe 78;24879 Neuberend;m;04621-855666;;
+Meyer;Joshua Bent;2;j;j;30;;;0205;2007-12-27;;Bi de School 17;24364 Holzdorf;m;04652-2433;0172-4307533;
+Mici;Hendrik;9;j;j;30;;;0901;2006-11-18;;Am Brautsee 45;24837 Schleswig;m;0176-79167120;;F
+Momberger;Nele;3;j;j;30;;;0307;2006-09-27;;Kurlandstr. 5;24960 Glücksburg;w;04631-4419772;0152-36761560;F
+Moritz;Hannes Florian;12;j;j;15;;;1206;2009-07-04;;Galgenredder 16;24837 Schleswig;m;0172-3071114;;
+Moritz Champéroux;Isaac Vincent;12;j;j;15;;;1201;2008-07-18;;Galgenreder 16;24837 Schleswig;m;0172-3071114;;
+Müller;Lennard;10;j;n;30;;;1002;2009-08-25;;Teichstr. 14;24392 Süderbrarup;m;04622-1896109;;
+Nau;Fiete;14;j;j;35;;;1401;2010-08-19;;Grüner Weg 14;24848 Kropp;m;0174-2088837;;
+Nissen;Svea;1;j;j;30;;;0109;2009-02-20;;Möhlhorster Weg 28 a;24357 Fleckeby;w;04354-8090915;0172-1809860;
+Ockert;Luis;11;j;n;30;;;1104;2009-07-08;;Husumer Str. 17;24837 Schleswig;m;04621-200574;0175-2429458;
+Ogara;Hila;8;j;n;30;;;0803;2009-08-10;;Süderacker 4;24980 Hörup;w;04639-7833946;0152-24956350;F
+Ortleb;Rene;14;j;j;30;;;1409;2006-11-13;;Bundesstr. 34;24407 Rabenkirchen-Faulück;m;04624-8263255;0176-84966699;F
+Ortleb;Lennox;14;j;j;30;;;1410;2010-11-02;;Bundesstr. 34;24407 Rabenkirchen-Faulück;m;04624-8263255;0176-84966699;F
+Paulsen;Mika;10;j;j;30;;;1003;;;Im Winkel 2;24860 Böklund;m;;;
+Petersen;Marie;13;j;j;30;;;1310;2006-09-17;;Wedinger Weg 11;24976 Handewitt;w;0461-24039;0171-3616615;S
+Petersen;Amelie;3;j;j;30;;;0303;2009-06-29;;Kolonnenweg 58;24837 Schleswig;w;;0172-2594705;F
+Petersen;Emilie;3;j;j;30;;;0304;2009-06-29;;Kolonnenweg 58;24837 Schleswig;w;04621-9517244;0172-2594705;F
+Petersen;Eric Luca;9;j;j;30;;;0902;2007-08-01;;Bahnhofstr. 7;24837 Schleswig;m;;0162-2573649;
+Pietsch;Phillip;11;j;j;25.50;;;1109;2009-07-27;;Westend 46;24860 Böklund;m;04623-265;;
+Pisarro;Ilaria;3;j;j;15;;;0309;2008-03-06;;Zum Dorfteich 8;24975 Husby;w;04634-93340;;
+Purra;Melanie;1;j;j;50;;;0105;2008-10-17;;Karpfenteich 4 a;24837 Schleswig;w;04621-4278266;0152-04089400;
+Putzke;Alina Marie;4;j;j;30;;;0401;2009-11-19;;Ostlandstr. 19;24768 Rendsburg;w;04331-6641044;;
+Ranta;Dylan Hugo;6;j;j;15;;;0608;2009-08-10;;Wiesengrund 12;24855 Jübek;m;04625-1756;0177-7754210;
+Rathjen;Bo Matti;11;j;j;20;;;1102;2008-09-14;;Mittelreihe 76;24879 Neuberend;m;04621-953544;;
+Reichberg;Ottilia;7;j;j;30;;;0709;2009-07-19;;Bojum 1;24402 Esgrus;w;04637-677;;
+Reifferscheid;Luna;8;j;j;30;;;0802;2007-12-06;;Hermine-Knuth-Str. 10 a;24955 Harrislee;w;0461-1682318;;
+Repenn;Jamie-Rasmuss;14;n;n;30;;;1406;2010-09-30;;Nedderend 24 a;24876 Hollingstedt;m;04627-3790206;;
+Schicke;Vanessa;1;j;j;30;;;0103;2009-02-04;;Hesttoft 7;24943 Flensburg;w;0461-4078973;01577-2517915;
+Scholz;Armin;2;j;j;30;;;0206;2008-06-20;;Ostlandstr. 6 b;24395 Gelting;m;;;
+Schulte;Finn Lukas;5;j;j;25;;;0502;2006-08-26;;Obere Teichstr. 11;24860 Böklund;m;04623-187742;;
+Schulte;Peer Ole;10;j;j;40;;;1006;2008-06-07;;Obere Teichstr. 11;24860 Böklund;m;04623-187742;;
+Schulz;Swana;15;p;n;30;;;1504;2010-03-21;;Am Lundbarg 2;24857 Fahrdorf;w;04621-301038;04351-735126;
+Schulze;Lennox;14;p;j;30;;;1407;2010-12-10;;Riesberg 6 b;24866 Busdorf;m;0176-65898191;;
+Simon;Maja;7;j;j;30;;;0708;2009-03-30;;Stapelholmer Weg 53;24988 Oeversee;w;04638-8029840;;
+Stade;Jos;9;j;j;30;;;0909;2008-11-27;;Güldenholmer Str. 1;24890 Süderfahrenstedt;m;0162-7228433;l.-clausen@t-online.de;F
+Steinert;Liana;1;j;j;35;;;0106;2009-06-04;;Quinkkjer 36;24860 Böklund;w;04623-185861;0152-56809066;
+Störte;Georgina;1;j;j;30;;;0101;2007-10-28;;Meiereistr. 7;24890 Süderfahrenstedt;w;04623-3033604;;
+Strunz;Freya;7;j;n;30;;;0701;2009-08-06;;Frörupholz 7;24988 Oeversee;w;0157-77057772;;S
+Tabel;Stella;3;j;j;30;;;0301;2007-09-12;;Roter Weg 7;24980 Nordhackstedt;w;04639-7587;0177-4544126;
+Tetzner;Jonas;10;j;j;17;;;1001;2008-01-23;;Rosenstr. 18;24848 Kropp;m;0174-1830115;;
+Thiesen;Francisca;13;j;j;25;;;1302;2007-04-20;;Hersbarg 3;24861 Bergenhusen;w;04885-901919;04885-7539980;
+Thimsen;Eileen;3;j;j;35;;;0305;2008-05-11;;Nordhackstedter Str. 15;24969 Lindewitt;w;04604-620;;
+Thomsen;Lasse;6;j;j;40;;;0604;2008-12-11;;Reit 6;24817 Tetenhusen;m;04624-5228004;0162-3994545;
+Tolle;Shayen;13;j;j;30;;;1305;2007-10-09;;Hüholzweg 3;24376 Kappeln;w;04642-2830;0152-33730107;F
+Tolle;Haylie;4;j;j;30;;;0406;2010-05-30;;Hüholzweg 3;24376 Kappeln;w;04642-2830;0152-33730107;F
+Ullmann;Lina-Mireille;1;n;n;35;;;0107;2007-02-10;;Kanzleistr. 33;24943 Flensburg;w;0172-5471299;;
+Underberg;Shayana;4;j;j;15;;;0404;2008-09-09;;Zum Dorfteich 8;24975 Husby;w;04634-93340;;
+Unger;Marlon;9;j;n;30;;;0908;2008-02-10;;Zaunkönigweg 1;24837 Schleswig;m;0176-22968209;;
+Voigt;Vincent;2;j;j;20;;;0208;2008-02-10;;Spanger Damm 19;24869 Dörpstedt;m;0176-39997910;0176-39985967;
+Waldenburger;Luis;5;j;j;30;;;0503;2007-05-07;;Schlenkenweg 2;24340 Eckernförde;m;04251-720074;0152-54814107;
+Weißgerber;Tjark;2;j;j;30;;;0201;2007-04-15;;Söby-Seeblick 11;24364 Holzdorf;m;04352-956389;0160-5324767;
+Wendland;Jason;12;j;j;30;;;1208;2007-08-10;;Ostseestr. 4;24376 Kappeln;m;04642-9250667;04642-9250668;
+Wichmann;Emma;15;j;n;30;;;1506;2010-08-29;;Arnisser Str. 12;24376 Kappeln;w;0170-8334202;04642-91930;
+Wilken;Luca;12;j;j;30;;;1202;2009-08-28;;Moordiek 18 e;24837 Schleswig;m;04621-948040;;
+Wunderling;Elias;6;j;j;30;;;0603;2008-08-13;;Hirschbogen 26;24941 Flensburg;m;0461-1684192;0172-6887707;
+Wüsthoff;Hailey;1;p;j;30;;;0110;2008-09-24;;Mühlenweg 16;24357 Fleckeby;w;04354-996629;0177-9415418;
+Zawieja;Christian;5;j;j;30;;;0509;2008-02-23;;Husbarg 1;24884 Selk;m;04621-9990465;;
+Ziemke;Marie;8;j;j;32;;;0804;2007-04-20;;Mühlenweg 4;24876 Hollingstedt;w;0172-1985493;;
+Ziemke;Felix;12;j;j;32;;;1203;2010-07-06;;Mühlenweg 4;24876 Hollingstedt;m;0172-1985493;;
